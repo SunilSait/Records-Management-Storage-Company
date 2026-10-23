@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" id="root-html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | ArchiVault — Records Management & Storage</title>
+    <meta name="description" content="Get in touch with ArchiVault for a free records management consultation, custom quote, or to learn more about our secure storage and digitization services.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=1.0">
+    <script>
+        (function(){try{if(localStorage.getItem('av-dark')==='1'){document.documentElement.classList.add('dark')}if(localStorage.getItem('av-rtl')==='1'){document.documentElement.setAttribute('dir','rtl')}}catch(e){}})();
+    </script>
+</head>
+<body>
+
+<div id="navbar-placeholder"></div>
+
+<main>
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>Get in touch for a free consultation, custom quote, or any questions about our services.</p>
+            <div class="page-breadcrumb">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span>Contact</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Grid -->
+    <section class="section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info-card fade-up">
+                    <h3 style="font-size:1.15rem;font-weight:600;margin-bottom:8px;">Get In Touch</h3>
+                    <p style="font-size:0.875rem;color:var(--text-muted);margin-bottom:20px;">We'd love to hear from you. Reach out through any of the channels below or fill out the form and we'll respond within 24 hours.</p>
+
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-location-dot"></i></div>
+                        <div class="contact-info-text">
+                            <h4>Headquarters</h4>
+                            <p>1200 Records Center Drive, Suite 400<br>Dallas, TX 75201, United States</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-phone"></i></div>
+                        <div class="contact-info-text">
+                            <h4>Phone</h4>
+                            <p>+1 (800) 123-4567 (Toll Free)<br>+1 (214) 555-0199 (Direct)</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-info-text">
+                            <h4>Email</h4>
+                            <p>info@archivault.com<br>support@archivault.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon"><i class="fas fa-clock"></i></div>
+                        <div class="contact-info-text">
+                            <h4>Business Hours</h4>
+                            <p>Monday – Friday: 8:00 AM – 6:00 PM CST<br>Saturday: 9:00 AM – 1:00 PM CST</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-card fade-up">
+                    <h3 style="font-size:1.15rem;font-weight:600;margin-bottom:20px;">Send Us a Message</h3>
+                    <form onsubmit="event.preventDefault(); alert('Thank you! Your message has been sent. Our team will respond within 24 hours.'); this.reset();">
+                        <div class="form-group">
+                            <label class="form-label" for="contact-name">Full Name</label>
+                            <input type="text" id="contact-name" class="form-input" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="contact-email">Email Address</label>
+                            <input type="email" id="contact-email" class="form-input" placeholder="your@company.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="contact-phone">Phone Number</label>
+                            <input type="tel" id="contact-phone" class="form-input" placeholder="+1 (555) 000-0000">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="contact-service">Service Interest</label>
+                            <select id="contact-service" class="form-input">
+                                <option value="">Select a service...</option>
+                                <option value="storage">Physical Records Storage</option>
+                                <option value="retrieval">Document Retrieval</option>
+                                <option value="scanning">Digital Scanning & OCR</option>
+                                <option value="destruction">Secure Destruction</option>
+                                <option value="compliance">Compliance Management</option>
+                                <option value="other">Other / General Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="contact-message">Message</label>
+                            <textarea id="contact-message" class="form-input" placeholder="Tell us about your records management needs..." rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-full btn-lg"><i class="fas fa-paper-plane"></i> Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Placeholder -->
+    <section class="section-alt" style="padding:0;">
+        <div style="width:100%;height:350px;background:var(--bg-alt);display:flex;align-items:center;justify-content:center;border-top:1px solid var(--border);">
+            <div style="text-align:center;color:var(--text-muted);">
+                <i class="fas fa-map-location-dot" style="font-size:2.5rem;margin-bottom:12px;display:block;opacity:0.4;"></i>
+                <p style="font-size:0.9rem;">Interactive Map — 1200 Records Center Drive, Dallas, TX 75201</p>
+                <p style="font-size:0.78rem;margin-top:4px;">Replace this section with your preferred map embed</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<div id="footer-placeholder"></div>
+
+<script src="components.js"></script>
+</body>
+</html>

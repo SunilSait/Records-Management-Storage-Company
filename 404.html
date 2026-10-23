@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" id="root-html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 — Page Not Found | ArchiVault</title>
+    <meta name="description" content="The page you're looking for doesn't exist or has been archived. Return to the ArchiVault home page.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css?v=1.0">
+    <script>
+        (function(){try{if(localStorage.getItem('av-dark')==='1'){document.documentElement.classList.add('dark')}if(localStorage.getItem('av-rtl')==='1'){document.documentElement.setAttribute('dir','rtl')}}catch(e){}})();
+    </script>
+</head>
+<body class="fullscreen-page">
+
+<!-- Top Bar -->
+<header class="fullscreen-topbar">
+    <a href="index.html" class="nav-logo" aria-label="ArchiVault Home">
+        <svg width="38" height="38" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs><linearGradient id="logoBg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1B3A4B"/><stop offset="100%" stop-color="#2A5470"/></linearGradient></defs>
+            <rect width="100" height="100" rx="18" fill="url(#logoBg)"/>
+            <rect x="22" y="18" width="36" height="46" rx="3" fill="none" stroke="#D4A843" stroke-width="4"/>
+            <path d="M30 30 L50 30 M30 38 L50 38 M30 46 L42 46" stroke="white" stroke-width="3" stroke-linecap="round"/>
+            <rect x="42" y="42" width="36" height="46" rx="3" fill="none" stroke="#D4A843" stroke-width="4" opacity="0.6"/>
+            <path d="M50 54 L70 54 M50 62 L70 62 M50 70 L62 70" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
+        </svg>
+        <span class="nav-logo-text">
+            <span class="brand-top">Records Management</span>
+            <span class="brand-bottom">ArchiVault</span>
+        </span>
+    </a>
+    <div style="display:flex;gap:0.5rem;align-items:center;">
+        <button onclick="toggleDir()" class="auth-toggle-btn" id="rtlToggleNav" aria-label="Toggle layout direction / RTL" title="Toggle Direction">
+            <span class="dir-indicator dir-label" style="font-size:0.625rem;font-weight:700;">LTR</span>
+        </button>
+        <button onclick="toggleTheme()" class="auth-toggle-btn" id="darkToggleNav" aria-label="Toggle dark mode" title="Toggle Theme">
+            <i class="fas fa-moon"></i>
+        </button>
+    </div>
+</header>
+
+<!-- Content -->
+<main class="fullscreen-content">
+    <div style="position:relative;max-width:540px;width:100%;margin:0 auto;text-align:center;">
+        <!-- Illustration with spinning background -->
+        <div class="error-illustration">
+            <svg class="error-spin-bg" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <circle cx="80" cy="80" r="72" stroke="var(--secondary)" stroke-width="3" stroke-dasharray="14 8" opacity="0.4"/>
+                <circle cx="80" cy="80" r="54" stroke="var(--primary)" stroke-width="2.5" stroke-dasharray="10 6" opacity="0.3"/>
+                <circle cx="80" cy="80" r="36" stroke="var(--secondary)" stroke-width="2" stroke-dasharray="6 4" opacity="0.2"/>
+            </svg>
+            <div class="error-code">404</div>
+        </div>
+
+        <div class="error-subtitle">Page Not Found</div>
+        <p class="error-desc">The page you're looking for has been archived or doesn't exist. Don't worry — all your stored records and client data remain secure.</p>
+
+        <div style="display:flex;gap:0.75rem;justify-content:center;flex-wrap:wrap;margin-bottom:2.25rem;">
+            <a href="index.html" class="btn btn-primary btn-lg"><i class="fas fa-home"></i> Back to Home</a>
+            <a href="contact.html" class="btn btn-secondary btn-lg"><i class="fas fa-headset"></i> Contact Support</a>
+        </div>
+
+        <div class="error-quick-links">
+            <span>Popular pages:</span>
+            <a href="services.html">Services</a>
+            <span>•</span>
+            <a href="pricing.html">Pricing Plans</a>
+            <span>•</span>
+            <a href="about.html">About Us</a>
+            <span>•</span>
+            <a href="login.html">Client Portal</a>
+        </div>
+    </div>
+</main>
+
+<script src="components.js"></script>
+</body>
+</html>
