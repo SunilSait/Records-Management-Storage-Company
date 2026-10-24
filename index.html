@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=1.0">
+    <link rel="stylesheet" href="style.css?v=7.4">
     <script>
         (function(){try{if(localStorage.getItem('av-dark')==='1'){document.documentElement.classList.add('dark')}if(localStorage.getItem('av-rtl')==='1'){document.documentElement.setAttribute('dir','rtl')}}catch(e){}})();
     </script>
@@ -113,55 +113,415 @@
         </div>
     </section>
 
-    <!-- Split Feature: Digital Scanning -->
-    <section class="section section-alt">
+    <!-- 1. Centered Panoramic Biometric Showcase & 3 Feature Pods -->
+    <section class="section design-panoramic-biometric" id="biometric-vault">
+        <div class="panoramic-grid-mesh"></div>
         <div class="container">
-            <div class="split-section">
-                <div class="split-image slide-left">
-                    <img src="assets/images/digitization-service.jpg" alt="Professional document digitization and scanning facility">
+            <div class="panoramic-header-wrap">
+                <div class="section-badge fade-up"><i class="fas fa-fingerprint"></i> Biometric Perimeter Security</div>
+                <h2 class="section-title fade-up">Bank-Grade <span style="color:#C4B5FD;">Biometric Access</span> & Airlock Control</h2>
+                <p class="section-desc fade-up">Multi-factor dual-custodian authentication, subterranean biometric airlocks, and electronic time-locks guarding physical archives 24/7.</p>
+            </div>
+
+            <!-- Center Panoramic Showcase Frame -->
+            <div class="panoramic-showcase-frame fade-up">
+                <img src="assets/images/biometric-vault-access.jpg" alt="Security officer performing dual biometric iris and hand scan at bank-grade vault entrance airlock" class="panoramic-image" loading="lazy">
+                <div class="panoramic-overlay"></div>
+                <div class="panoramic-badge-live">
+                    <span class="badge-dot green"></span> Iris & Palm Scan Active • Dual-Custodian
                 </div>
-                <div class="split-content slide-right">
-                    <div class="section-badge"><i class="fas fa-qrcode"></i> Digital Transformation</div>
-                    <h2>Transform Paper into <span style="color:var(--secondary);">Searchable Data</span></h2>
-                    <p>Our enterprise scanning bureau converts mountains of paper into organized, searchable digital archives. Full OCR capability, metadata tagging, and integration with your existing document management systems.</p>
-                    <div class="feature-checklist">
-                        <div class="feature-check"><i class="fas fa-check-circle"></i> High-speed scanning up to 250 pages/minute</div>
-                        <div class="feature-check"><i class="fas fa-check-circle"></i> Full-text OCR with 99.5% accuracy</div>
-                        <div class="feature-check"><i class="fas fa-check-circle"></i> Custom metadata indexing & tagging</div>
-                        <div class="feature-check"><i class="fas fa-check-circle"></i> Secure cloud delivery or on-premise storage</div>
+                <div class="panoramic-badge-tag">
+                    <i class="fas fa-shield-halved"></i> Airlock 01: Pressurized • Latency 12ms
+                </div>
+                <div class="panoramic-floating-strip">
+                    <i class="fas fa-clock"></i> Electronic Time Locks Engaged • Subterranean Level -3 • Zero Single-Operator Bypass
+                </div>
+            </div>
+
+            <!-- 3 Feature Cards Grid -->
+            <div class="panoramic-cards-grid">
+                <div class="panoramic-feature-card fade-up">
+                    <div class="panoramic-card-icon"><i class="fas fa-eye"></i></div>
+                    <div class="panoramic-card-metric">99.8% Match</div>
+                    <h4>Dual Iris & Palm Scan</h4>
+                    <p>Requires simultaneous biometric verification from two certified custodians to disengage perimeter airlock doors.</p>
+                    <div class="panoramic-chips">
+                        <span class="panoramic-chip"><i class="fas fa-check-circle"></i> Sub-second authentication</span>
+                        <span class="panoramic-chip"><i class="fas fa-check-circle"></i> Anti-spoofing liveness check</span>
                     </div>
-                    <a href="services.html" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Learn More</a>
+                </div>
+
+                <div class="panoramic-feature-card fade-up">
+                    <div class="panoramic-card-icon"><i class="fas fa-door-closed"></i></div>
+                    <div class="panoramic-card-metric">3-Stage Entry</div>
+                    <h4>Interlocking Blast Airlocks</h4>
+                    <p>Hermetically sealed dual-door interlock chambers prevent tailgating while preserving vault pressure and humidity.</p>
+                    <div class="panoramic-chips">
+                        <span class="panoramic-chip"><i class="fas fa-check-circle"></i> Heavy-duty stainless steel</span>
+                        <span class="panoramic-chip"><i class="fas fa-check-circle"></i> Anti-passback interlock logic</span>
+                    </div>
+                </div>
+
+                <div class="panoramic-feature-card fade-up">
+                    <div class="panoramic-card-icon"><i class="fas fa-receipt"></i></div>
+                    <div class="panoramic-card-metric">100% Immutable</div>
+                    <h4>Real-Time Audit Trail</h4>
+                    <p>Every biometric verification, door state change, and personnel timestamp is cryptographically logged to client portal.</p>
+                    <div class="panoramic-chips">
+                        <span class="panoramic-chip"><i class="fas fa-check-circle"></i> Instant compliance export</span>
+                        <span class="panoramic-chip"><i class="fas fa-check-circle"></i> SOC 2 & HIPAA audit ready</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="panoramic-cta fade-up">
+                <a href="services.html" class="btn btn-primary btn-lg"><i class="fas fa-arrow-right"></i> Explore Vault Security Architecture</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 2. Environmental Lab Telemetry Dashboard (Live Gauge Pods Design) -->
+    <section class="section design-lab-dashboard" id="microclimate-lab">
+        <div class="container">
+            <div class="lab-header-wrap">
+                <div class="section-badge fade-up"><i class="fas fa-temperature-arrow-down"></i> Environmental Telemetry</div>
+                <h2 class="section-title fade-up">Continuous <span style="color:var(--secondary);">Microclimate Telemetry</span> & Clean Air</h2>
+                <p class="section-desc fade-up">Paper fiber and historical parchment degrade rapidly under humidity spikes. Our archival chambers maintain continuous atmospheric equilibrium regulated to ISO 11799 standards.</p>
+            </div>
+
+            <div class="lab-dashboard-grid">
+                <!-- Media Card with Live Grid Badge -->
+                <div class="lab-media-card slide-left">
+                    <img src="assets/images/climate-monitoring-lab.jpg" alt="Archivist and environmental engineer inspecting real-time climate monitoring sensors and relative humidity graphs" loading="lazy">
+                    <div class="lab-live-badge">
+                        <span class="badge-dot green"></span> Sensor Grid 04 Live • 60-Sec Sync
+                    </div>
+                </div>
+
+                <!-- 4 Live Gauge Pods & Compliance Banner -->
+                <div class="lab-gauges-container slide-right">
+                    <div class="lab-gauges-grid">
+                        <div class="lab-gauge-card">
+                            <div class="lab-gauge-head">
+                                <span><i class="fas fa-temperature-half"></i> TEMPERATURE</span>
+                                <span style="color:var(--secondary); font-weight:600;">STABLE</span>
+                            </div>
+                            <div class="lab-gauge-num">65.0°F</div>
+                            <div class="lab-gauge-sub">±0.5°F Strict Equilibrium</div>
+                            <div class="lab-meter-track"><div class="lab-meter-fill" style="width: 70%;"></div></div>
+                        </div>
+
+                        <div class="lab-gauge-card">
+                            <div class="lab-gauge-head">
+                                <span><i class="fas fa-droplet"></i> RELATIVE HUMIDITY</span>
+                                <span style="color:var(--secondary); font-weight:600;">OPTIMAL</span>
+                            </div>
+                            <div class="lab-gauge-num">38.5%</div>
+                            <div class="lab-gauge-sub">Target Band: 38% – 40%</div>
+                            <div class="lab-meter-track"><div class="lab-meter-fill" style="width: 62%;"></div></div>
+                        </div>
+
+                        <div class="lab-gauge-card">
+                            <div class="lab-gauge-head">
+                                <span><i class="fas fa-wind"></i> AIR PURITY</span>
+                                <span style="color:var(--secondary); font-weight:600;">HEPA 99.97%</span>
+                            </div>
+                            <div class="lab-gauge-num">0.00 <small style="font-size:0.9rem;">spores</small></div>
+                            <div class="lab-gauge-sub">3-Stage Air Filtration</div>
+                            <div class="lab-meter-track"><div class="lab-meter-fill" style="width: 98%;"></div></div>
+                        </div>
+
+                        <div class="lab-gauge-card">
+                            <div class="lab-gauge-head">
+                                <span><i class="fas fa-bolt"></i> POWER GRID</span>
+                                <span style="color:var(--secondary); font-weight:600;">BACKUP 100%</span>
+                            </div>
+                            <div class="lab-gauge-num">Dual UPS</div>
+                            <div class="lab-gauge-sub">Diesel Generator Auto-Failover</div>
+                            <div class="lab-meter-track"><div class="lab-meter-fill" style="width: 100%;"></div></div>
+                        </div>
+                    </div>
+
+                    <!-- ISO Compliance Strip -->
+                    <div class="lab-compliance-strip">
+                        <i class="fas fa-award"></i>
+                        <div class="lab-compliance-text">
+                            <strong>ISO 11799 Archival Storage Certified</strong>
+                            <span>Continuous calibrated telemetry records automatically archived for regulatory compliance audits.</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Stats Bar -->
-    <section class="stats-bar">
+    <!-- 3. Panoramic Fortress Shield (Flanking Radial Spec Callouts Design) -->
+    <section class="section design-fortress-shield" id="fireproof-vault">
         <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item fade-up">
-                    <div class="stat-number" data-count="5000000" data-suffix="+">0</div>
-                    <div class="stat-label">Boxes in Storage</div>
+            <div class="fortress-header-wrap">
+                <div class="section-badge fade-up"><i class="fas fa-shield-virus"></i> Catastrophe Protection</div>
+                <h2 class="section-title fade-up">Clean-Agent <span style="color:var(--secondary);">Novec 1230 Gas</span> & Blast Integrity</h2>
+                <p class="section-desc fade-up">Water sprinklers destroy paper records as swiftly as flames. ArchiVault utilizes waterless clean-agent gas systems that extinguish thermal events in under 10 seconds without residue or moisture.</p>
+            </div>
+
+            <!-- 3-Column Radial / Flanking Layout -->
+            <div class="fortress-3col-layout">
+                <!-- Left Flanking Specs -->
+                <div class="fortress-col slide-left">
+                    <div class="fortress-spec-box">
+                        <div class="fortress-spec-metric"><i class="fas fa-stopwatch"></i> &lt; 10 Sec</div>
+                        <h4>Rapid Gas Discharge</h4>
+                        <p>Smothers thermal combustion in seconds by rapidly absorbing heat without chemical residue.</p>
+                    </div>
+                    <div class="fortress-spec-box">
+                        <div class="fortress-spec-metric"><i class="fas fa-droplet-slash"></i> 0% Water</div>
+                        <h4>Zero Moisture Damage</h4>
+                        <p>Completely harmless to delicate historical ink, paper fibers, and magnetic media storage.</p>
+                    </div>
                 </div>
-                <div class="stat-item fade-up">
-                    <div class="stat-number" data-count="2400" data-suffix="+">0</div>
-                    <div class="stat-label">Enterprise Clients</div>
+
+                <!-- Center Panoramic Media -->
+                <div class="fortress-center-media fade-up">
+                    <img src="assets/images/fireproof-vault-chamber.jpg" alt="Certified fire safety engineer inspecting clean-agent Novec 1230 gas suppression cylinder system and blast vault doors" loading="lazy">
+                    <div class="fortress-media-badge">
+                        <span class="badge-dot green"></span> Novec 1230 Armed • Zero Water Risk
+                    </div>
                 </div>
-                <div class="stat-item fade-up">
-                    <div class="stat-number" data-count="15" data-suffix="">0</div>
-                    <div class="stat-label">Secure Facilities</div>
+
+                <!-- Right Flanking Specs -->
+                <div class="fortress-col slide-right">
+                    <div class="fortress-spec-box">
+                        <div class="fortress-spec-metric"><i class="fas fa-shield-halved"></i> 4-Hour</div>
+                        <h4>Blast & Flame Barrier</h4>
+                        <p>Subterranean reinforced concrete envelope rated against extreme heat and external impact.</p>
+                    </div>
+                    <div class="fortress-spec-box">
+                        <div class="fortress-spec-metric"><i class="fas fa-crosshairs"></i> VESDA Laser</div>
+                        <h4>Early Smoke Detection</h4>
+                        <p>Continuous laser air sampling detects microscopic pyrolysis before visible smoke appears.</p>
+                    </div>
                 </div>
-                <div class="stat-item fade-up">
-                    <div class="stat-number" data-count="99" data-suffix=".9%">0</div>
-                    <div class="stat-label">Retrieval Accuracy</div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <!-- 4. Large-Format Blueprint CAD Studio (Laser-Scan Workstation Design) -->
+    <section class="section design-cad-studio" id="cad-studio">
+        <div class="cad-grid-backdrop"></div>
+        <div class="container">
+            <div class="cad-studio-grid">
+                <!-- Left Specs & Format Controller -->
+                <div class="cad-content slide-left">
+                    <div class="cad-badge"><i class="fas fa-compass-drafting"></i> Oversize Engineering Imaging</div>
+                    <h2 class="section-title" style="text-align:left; margin-bottom:16px;">Large-Format <span style="color:var(--secondary);">Blueprint & CAD</span> Digitization Bureau</h2>
+                    <p class="section-desc" style="text-align:left; margin-bottom:20px;">Standard scanners cannot handle municipal drawings, architectural schematics, or infrastructure maps. Our specialized studio digitizes continuous rolls up to 44 inches wide with 1200 DPI optical clarity.</p>
+                    
+                    <!-- Resolution Chips -->
+                    <div class="cad-resolutions-strip">
+                        <div class="cad-res-pill">
+                            <strong>400 DPI</strong>
+                            <span>Fast Archival</span>
+                        </div>
+                        <div class="cad-res-pill">
+                            <strong>800 DPI</strong>
+                            <span>Fine Schematics</span>
+                        </div>
+                        <div class="cad-res-pill" style="border-color:var(--secondary); background:rgba(124,58,237,0.08);">
+                            <strong>1200 DPI</strong>
+                            <span>Ultra-HD Master</span>
+                        </div>
+                    </div>
+
+                    <!-- Output Formats -->
+                    <div class="cad-formats-strip">
+                        <span class="cad-format-chip"><i class="fas fa-file-pdf"></i> PDF/A-1b Searchable</span>
+                        <span class="cad-format-chip"><i class="fas fa-draw-polygon"></i> AutoCAD DWG</span>
+                        <span class="cad-format-chip"><i class="fas fa-image"></i> GeoTIFF</span>
+                        <span class="cad-format-chip"><i class="fas fa-bezier-curve"></i> Vector SVG</span>
+                    </div>
+
+                    <a href="services.html" class="btn btn-primary"><i class="fas fa-file-pdf"></i> Explore Scanning Specs</a>
+                </div>
+
+                <!-- Right Scanner Screen with Live Laser Beam Animation -->
+                <div class="cad-scanner-screen slide-right">
+                    <img src="assets/images/blueprint-scanning-studio.jpg" alt="Specialist feeding wide 42-inch architectural blueprint into large-format roll scanner with CAD monitors" loading="lazy">
+                    <div class="cad-laser-line"></div>
+                    <div class="cad-status-tag">
+                        <span class="badge-dot blue"></span> 44" ULTRA-HD SCANNING ACTIVE
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Armored Chain-of-Custody Timeline (Connected Journey & E-Receipt Design) -->
+    <section class="section design-custody-journey" id="chain-of-custody">
+        <div class="container">
+            <div class="custody-header-wrap">
+                <div class="section-badge fade-up"><i class="fas fa-truck-fast"></i> White-Glove Logistics</div>
+                <h2 class="section-title fade-up">Tamper-Evident <span style="color:var(--secondary);">Courier Handover</span> & Pickup Verification</h2>
+                <p class="section-desc fade-up">Your legal chain-of-custody starts the instant records leave your office. Background-checked couriers seal every carton with serialized locks and record dual signatures on-site.</p>
+            </div>
+
+
+            <!-- Lower Split: Photo + Live E-Receipt Widget -->
+            <div class="custody-lower-split">
+                <div class="custody-photo-wrap slide-left">
+                    <img src="assets/images/custody-handover-reception.jpg" alt="Uniformed ArchiVault courier presenting digital signature tablet to corporate executive with tamper-sealed document boxes" loading="lazy">
+                </div>
+
+                <div class="custody-manifest-card slide-right">
+                    <div class="manifest-card-header">
+                        <strong><i class="fas fa-file-contract" style="color:var(--secondary);"></i> CHAIN-OF-CUSTODY MANIFEST</strong>
+                        <span class="manifest-pill-signed"><i class="fas fa-check-circle"></i> VERIFIED & SIGNED</span>
+                    </div>
+                    <div class="manifest-field-row">
+                        <span>Manifest ID:</span>
+                        <strong>#AV-MANIFEST-89241</strong>
+                    </div>
+                    <div class="manifest-field-row">
+                        <span>Seal Serial Numbers:</span>
+                        <strong>#PL-04821 through #PL-04845</strong>
+                    </div>
+                    <div class="manifest-field-row">
+                        <span>Courier Name & ID:</span>
+                        <strong>Marcus Vance (TSA-Cleared #884)</strong>
+                    </div>
+                    <div class="manifest-field-row">
+                        <span>Timestamp:</span>
+                        <strong>09:41:22 AM EST • GPS Confirmed</strong>
+                    </div>
+                    <div class="manifest-signature-box">
+                        <span class="signature-label">Digital Client Signature:</span>
+                        <span class="signature-scribble">J. Richardson</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. On-Site Mobile Shredding (3-Card Trifecta Design with Image) -->
+    <section class="section design-shredding-trifecta" id="mobile-shredding">
+        <div class="container">
+            <div class="shred-header-wrap">
+                <div class="section-badge fade-up"><i class="fas fa-file-shield"></i> On-Site Verifiable Destruction</div>
+                <h2 class="section-title fade-up">On-Site Mobile Shredding with <span style="color:var(--secondary);">Verifiable Custody</span></h2>
+                <p class="section-desc fade-up">Witness confidential document destruction directly outside your corporate facility doors. High-speed cross-cut blades, locked bin tippers, and instant notarized Certificates of Destruction.</p>
+            </div>
+
+            <!-- 3-Card Trifecta Grid -->
+            <div class="shred-trifecta-grid">
+                <!-- Card 1: Hydraulic Tipper Intake -->
+                <div class="shred-card fade-up">
+                    <div class="shred-visual-frame">
+                        <img src="assets/images/shred-bin-tipper-intake.jpg" alt="Security specialist operating automated hydraulic bin tipper loading locked confidential bin into mobile shredder" class="shred-visual-img" loading="lazy">
+                        <div class="shred-visual-overlay"></div>
+                        <div class="shred-visual-badge-top">
+                            <span class="badge-dot green"></span> ZERO-CONTACT • AUTOMATED INTAKE
+                        </div>
+                        <div class="shred-visual-badge-bottom">
+                            <span><i class="fas fa-box-archive"></i> 64 & 96 Gal Consoles</span>
+                            <span>Tare Weighed</span>
+                        </div>
+                    </div>
+                    <div class="shred-card-head">
+                        <div class="shred-card-icon"><i class="fas fa-box-archive"></i></div>
+                        <span class="shred-step-tag">STAGE 01 • INTAKE</span>
+                    </div>
+                    <h3 class="shred-card-title">Zero-Contact Bin Tipper</h3>
+                    <div class="shred-metric-wrap">
+                        <div class="shred-metric-value">64 & 96 Gal</div>
+                        <div class="shred-metric-label">Executive Tamper-Locked Consoles</div>
+                    </div>
+                    <p class="shred-card-desc">Specialists wheel locked security consoles to the mobile shredding unit. An automated hydraulic arm lifts and dumps contents directly into the sealed hopper without manual touching.</p>
+                    <div class="shred-pills-list">
+                        <div class="shred-pill"><i class="fas fa-check-circle"></i> Dual-custodian keyed padlocks</div>
+                        <div class="shred-pill"><i class="fas fa-check-circle"></i> Integrated load-cell tare scale</div>
+                        <div class="shred-pill"><i class="fas fa-check-circle"></i> Serialized barcode seal scan</div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Featured Visual Centerpiece with Generated Image -->
+                <div class="shred-card featured-card fade-up">
+                    <div class="shred-visual-frame">
+                        <img src="assets/images/mobile-shredding-operation.jpg" alt="Enterprise document destruction security specialist operating high-tech mobile shredding truck on-site with visible cross-cut blades and diagnostic console" class="shred-visual-img" loading="lazy">
+                        <div class="shred-visual-overlay"></div>
+                        <div class="shred-visual-badge-top">
+                            <span class="badge-dot green"></span> ACTIVE • 3,800 LBS/HR
+                        </div>
+                        <div class="shred-visual-badge-bottom">
+                            <span><i class="fas fa-video"></i> Live CCTV Witness Feed</span>
+                            <span>NAID AAA #SH-409</span>
+                        </div>
+                    </div>
+                    <div class="shred-card-head">
+                        <div class="shred-card-icon"><i class="fas fa-scissors"></i></div>
+                        <span class="shred-step-tag active">STAGE 02 • DESTRUCTION</span>
+                    </div>
+                    <h3 class="shred-card-title">High-Torque Cross-Cut Chamber</h3>
+                    <div class="shred-metric-wrap">
+                        <div class="shred-metric-value">3,800 Lbs/Hr</div>
+                        <div class="shred-metric-label">DIN 66399 Level P-5 Security Shred</div>
+                    </div>
+                    <p class="shred-card-desc">Industrial rotary cutters pulverize thousands of pages into unrecoverable 30 mm² micro-particles. Client representatives can witness every batch in-person through armored glass or CCTV monitors.</p>
+                    <div class="shred-pills-list">
+                        <div class="shred-pill"><i class="fas fa-check-circle"></i> Solid carbide interlocking cutters</div>
+                        <div class="shred-pill"><i class="fas fa-check-circle"></i> Hard drives & magnetic tapes accepted</div>
+                        <div class="shred-pill"><i class="fas fa-check-circle"></i> Sealed sound-dampened mobile body</div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Instant Notarized Certificate -->
+                <div class="shred-card fade-up">
+                    <div class="shred-visual-frame">
+                        <img src="assets/images/shred-certificate-witness.jpg" alt="Corporate compliance officer and security witness verifying digital certificate of destruction on tablet" class="shred-visual-img" loading="lazy">
+                        <div class="shred-visual-overlay"></div>
+                        <div class="shred-visual-badge-top">
+                            <span class="badge-dot green"></span> NOTARIZED • INSTANT PORTAL SYNC
+                        </div>
+                        <div class="shred-visual-badge-bottom">
+                            <span><i class="fas fa-file-contract"></i> NAID AAA Certified</span>
+                            <span>100% Recycled Pulp</span>
+                        </div>
+                    </div>
+                    <div class="shred-card-head">
+                        <div class="shred-card-icon"><i class="fas fa-certificate"></i></div>
+                        <span class="shred-step-tag">STAGE 03 • COMPLIANCE</span>
+                    </div>
+                    <h3 class="shred-card-title">Instant Legal E-Certificate</h3>
+                    <div class="shred-metric-wrap">
+                        <div class="shred-metric-value">100% Recycled</div>
+                        <div class="shred-metric-label">Closed-Loop Sustainable Paper Pulp</div>
+                    </div>
+                    <p class="shred-card-desc">The moment destruction wraps up, an official Certificate of Destruction is digitally signed on-site and populated into your ArchiVault client portal for immediate audit compliance.</p>
+                    <div class="shred-pills-list">
+                        <div class="shred-pill"><i class="fas fa-check-circle"></i> Notarized timestamp & weight audit</div>
+                        <div class="shred-pill"><i class="fas fa-check-circle"></i> Direct transfer to vetted pulp mills</div>
+                        <div class="shred-pill"><i class="fas fa-check-circle"></i> HIPAA, FACTA & GLBA compliant</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Action & Trust Bar -->
+            <div class="shred-bottom-cta fade-up">
+                <div class="shred-trust-badges">
+                    <div class="shred-trust-item"><i class="fas fa-shield-halved"></i> NAID AAA Certified</div>
+                    <div class="shred-trust-item"><i class="fas fa-lock"></i> Zero-Landfill Guarantee</div>
+                    <div class="shred-trust-item"><i class="fas fa-clipboard-check"></i> 100% Audit-Ready</div>
+                </div>
+                <div class="shred-action-btns">
+                    <a href="services.html" class="btn btn-primary"><i class="fas fa-calendar-check"></i> Book Mobile Shredding</a>
+                    <a href="pricing.html" class="btn btn-secondary"><i class="fas fa-receipt"></i> View Pricing</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- How It Works -->
-    <section class="section">
+    <section class="section section-alt">
         <div class="container text-center">
             <div class="section-badge fade-up"><i class="fas fa-route"></i> Simple Process</div>
             <h2 class="section-title fade-up">How It Works</h2>
@@ -204,7 +564,9 @@
                     </div>
                     <p class="testimonial-text">"ArchiVault transformed our records management. We went from a chaotic filing room to a fully indexed, retrievable archive in under two weeks."</p>
                     <div class="testimonial-author">
-                        <div class="testimonial-avatar">MR</div>
+                        <div class="testimonial-avatar">
+                            <img src="assets/images/avatar-michael-reynolds.jpg" alt="Michael Reynolds" loading="lazy">
+                        </div>
                         <div class="testimonial-info">
                             <strong>Michael Reynolds</strong>
                             <span>CFO, Meridian Holdings</span>
@@ -217,7 +579,9 @@
                     </div>
                     <p class="testimonial-text">"The same-day retrieval service is incredible. When we need a file for an audit, ArchiVault delivers within hours — every single time."</p>
                     <div class="testimonial-author">
-                        <div class="testimonial-avatar">SP</div>
+                        <div class="testimonial-avatar">
+                            <img src="assets/images/avatar-sarah-patterson.jpg" alt="Sarah Patterson" loading="lazy">
+                        </div>
                         <div class="testimonial-info">
                             <strong>Sarah Patterson</strong>
                             <span>Compliance Director, Axion Legal</span>
@@ -230,7 +594,9 @@
                     </div>
                     <p class="testimonial-text">"Their digital scanning service saved us thousands of square feet of office space. We can now search 20 years of records in seconds."</p>
                     <div class="testimonial-author">
-                        <div class="testimonial-avatar">JK</div>
+                        <div class="testimonial-avatar">
+                            <img src="assets/images/avatar-james-kowalski.jpg" alt="James Kowalski" loading="lazy">
+                        </div>
                         <div class="testimonial-info">
                             <strong>James Kowalski</strong>
                             <span>IT Director, HealthFirst Medical</span>
@@ -268,14 +634,103 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
+    <!-- CTA Section: Enterprise Archive Transition Hub -->
+    <section class="cta-home1-wrap">
         <div class="container">
-            <h2 class="fade-up">Ready to Secure Your Records?</h2>
-            <p class="fade-up">Get started with a free consultation and customized storage plan tailored to your organization's needs.</p>
-            <div class="cta-actions fade-up">
-                <a href="contact.html" class="btn btn-primary btn-lg"><i class="fas fa-calendar-check"></i> Schedule Consultation</a>
-                <a href="pricing.html" class="btn btn-secondary btn-lg"><i class="fas fa-tag"></i> View Pricing</a>
+            <div class="cta-home1-card fade-up">
+                <div class="cta-card-mesh"></div>
+                <div class="cta-split-grid">
+                    <!-- Left: Compelling Value & Actions -->
+                    <div class="cta-content-left">
+                        <div class="cta-badge-glow">
+                            <span class="badge-dot green"></span>
+                            <i class="fas fa-shield-halved"></i>
+                            <span>Enterprise Security & Transition</span>
+                        </div>
+                        <h2>Ready to Elevate Your <span class="cta-gradient-title">Records Security?</span></h2>
+                        <p>Join over 2,400+ healthcare networks, financial institutions, and corporate leaders. Schedule a zero-obligation records audit or calculate tiered storage economics tailored to your box volume.</p>
+                        
+                        <div class="cta-actions-row">
+                            <a href="contact.html" class="btn btn-primary btn-lg cta-main-btn"><i class="fas fa-calendar-check"></i> Schedule Free Consultation</a>
+                            <a href="pricing.html" class="btn btn-secondary btn-lg cta-sub-btn"><i class="fas fa-calculator"></i> Calculate Volume Rates</a>
+                        </div>
+
+                        <div class="cta-trust-badges-grid">
+                            <div class="cta-trust-badge">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Zero Setup or Intake Fees</span>
+                            </div>
+                            <div class="cta-trust-badge">
+                                <i class="fas fa-check-circle"></i>
+                                <span>100% Chain-of-Custody</span>
+                            </div>
+                            <div class="cta-trust-badge">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Complimentary First Pickup</span>
+                            </div>
+                            <div class="cta-trust-badge">
+                                <i class="fas fa-check-circle"></i>
+                                <span>SOC 2 & HIPAA Certified</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Interactive Onboarding Pipeline Snapshot -->
+                    <div class="cta-content-right">
+                        <div class="cta-pipeline-widget">
+                            <div class="cta-widget-top">
+                                <div class="widget-title-wrap">
+                                    <div class="widget-icon-glow"><i class="fas fa-dolly"></i></div>
+                                    <div>
+                                        <h4>48-Hour Rapid Onboarding</h4>
+                                        <small>White-Glove Archival Transition</small>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cta-steps-list">
+                                <div class="cta-step-item completed">
+                                    <div class="step-num-icon"><i class="fas fa-check"></i></div>
+                                    <div class="step-details">
+                                        <strong>1. On-Site Physical Audit</strong>
+                                        <span>Complimentary box count, index verification & density analysis</span>
+                                    </div>
+                                </div>
+                                <div class="cta-step-item completed">
+                                    <div class="step-num-icon"><i class="fas fa-check"></i></div>
+                                    <div class="step-details">
+                                        <strong>2. Secure Barcoded Transport</strong>
+                                        <span>Tamper-evident serialized seals with real-time GPS fleet tracking</span>
+                                    </div>
+                                </div>
+                                <div class="cta-step-item active">
+                                    <div class="step-num-icon"><i class="fas fa-vault"></i></div>
+                                    <div class="step-details">
+                                        <strong>3. Climate-Controlled Placement</strong>
+                                        <span>Regulated 65°F / 40% RH high-density vault racking & RFID check-in</span>
+                                    </div>
+                                </div>
+                                <div class="cta-step-item">
+                                    <div class="step-num-icon"><i class="fas fa-laptop-code"></i></div>
+                                    <div class="step-details">
+                                        <strong>4. Cloud Portal Live</strong>
+                                        <span>Same-day digital access, search-on-demand & compliance dashboard</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="cta-widget-bottom">
+                                <div class="cta-rating-note">
+                                    <span class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
+                                    <span>4.9 / 5.0 Enterprise Trust</span>
+                                </div>
+                                <a href="tel:18005550199" class="cta-hotline-link">
+                                    <i class="fas fa-headset"></i> 24/7 Support Hotline
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -283,6 +738,6 @@
 
 <div id="footer-placeholder"></div>
 
-<script src="components.js"></script>
+<script src="components.js?v=5.6"></script>
 </body>
 </html>

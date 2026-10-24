@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=1.0">
+    <link rel="stylesheet" href="style.css?v=7.3">
     <script>
         (function(){try{if(localStorage.getItem('av-dark')==='1'){document.documentElement.classList.add('dark')}if(localStorage.getItem('av-rtl')==='1'){document.documentElement.setAttribute('dir','rtl')}}catch(e){}})();
     </script>
@@ -27,19 +27,19 @@
     <!-- Sidebar -->
     <aside class="dash-sidebar" id="dashSidebar">
         <div class="dash-sidebar-header">
-            <a href="index.html" class="nav-logo" aria-label="ArchiVault Home" style="text-decoration:none;">
-                <svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <defs><linearGradient id="logoBg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1B3A4B"/><stop offset="100%" stop-color="#2A5470"/></linearGradient></defs>
+            <a href="index.html" class="nav-logo" aria-label="ArchiVault Home">
+                <svg width="38" height="38" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs><linearGradient id="logoBg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1A1A5E"/><stop offset="100%" stop-color="#2D2D8A"/></linearGradient></defs>
                     <rect width="100" height="100" rx="18" fill="url(#logoBg)"/>
-                    <rect x="22" y="18" width="36" height="46" rx="3" fill="none" stroke="#D4A843" stroke-width="4"/>
+                    <rect x="22" y="18" width="36" height="46" rx="3" fill="none" stroke="#7C3AED" stroke-width="4"/>
                     <path d="M30 30 L50 30 M30 38 L50 38 M30 46 L42 46" stroke="white" stroke-width="3" stroke-linecap="round"/>
-                    <rect x="42" y="42" width="36" height="46" rx="3" fill="none" stroke="#D4A843" stroke-width="4" opacity="0.6"/>
+                    <rect x="42" y="42" width="36" height="46" rx="3" fill="none" stroke="#7C3AED" stroke-width="4" opacity="0.6"/>
                     <path d="M50 54 L70 54 M50 62 L70 62 M50 70 L62 70" stroke="white" stroke-width="3" stroke-linecap="round" opacity="0.6"/>
                 </svg>
-                <span class="nav-logo-text">
-                    <span class="brand-top" style="color:#D4A843;">Records Mgmt</span>
-                    <span class="brand-bottom" style="color:#fff;">ArchiVault</span>
-                </span>
+                <div class="nav-logo-text">
+                    <span class="brand-top">Records Management</span>
+                    <span class="brand-bottom">ArchiVault</span>
+                </div>
             </a>
         </div>
 
@@ -56,8 +56,7 @@
         </nav>
 
         <div class="dash-sidebar-footer">
-            <a href="index.html" class="dash-nav-item" style="color:rgba(255,255,255,0.5);"><i class="fas fa-arrow-left"></i> Back to Website</a>
-            <a href="login.html" class="dash-nav-item" style="color:#ef4444;"><i class="fas fa-right-from-bracket"></i> Logout</a>
+            <button type="button" class="dash-nav-item dash-logout-btn" id="logoutTriggerBtn" style="color:#ef4444;"><i class="fas fa-right-from-bracket"></i> Logout</button>
         </div>
     </aside>
 
@@ -69,10 +68,7 @@
                 <button class="dash-mobile-toggle" id="dashMobileToggle" aria-label="Toggle sidebar">
                     <i class="fas fa-bars"></i>
                 </button>
-                <div class="dash-search-box">
-                    <i class="fas fa-search"></i>
-                    <input type="text" placeholder="Search records, boxes, invoices...">
-                </div>
+                <h1 class="dash-header-title" id="dashHeaderTitle"><span class="dash-title-prefix">Dashboard </span>Overview</h1>
             </div>
             <div class="dash-header-right">
                 <button class="nav-icon-btn" id="rtlToggleNav" onclick="toggleDir()" aria-label="Toggle RTL" title="Toggle RTL">
@@ -127,7 +123,7 @@
             <div class="dash-tab-content active" id="tab-overview">
                 <!-- Welcome -->
                 <div class="dash-welcome">
-                    <h2><i class="fas fa-hand-wave" style="margin-right:8px;"></i> Welcome back, Sarah!</h2>
+                    <h2><i class="fas fa-hand" style="margin-right:8px; color:var(--secondary);"></i> Welcome back, Sarah!</h2>
                     <p>Here's a summary of your records management activity. You have 3 pending retrieval requests and 1 scan job in progress.</p>
                 </div>
 
@@ -213,8 +209,140 @@
                                     <td data-label="Description">12 boxes — Expired HR Records 2017</td>
                                     <td data-label="Status"><span class="dash-status completed"><span class="dash-status-dot"></span> Certified</span></td>
                                 </tr>
+                                <tr>
+                                    <td data-label="Date">Oct 15, 2024</td>
+                                    <td data-label="Type">Scan Request</td>
+                                    <td data-label="Description">Patent Filings #PT-442 — 210 pages OCR</td>
+                                    <td data-label="Status"><span class="dash-status active"><span class="dash-status-dot"></span> Ready</span></td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Date">Oct 12, 2024</td>
+                                    <td data-label="Type">Storage</td>
+                                    <td data-label="Description">8 boxes received — Corporate Deeds & Bylaws</td>
+                                    <td data-label="Status"><span class="dash-status completed"><span class="dash-status-dot"></span> Indexed</span></td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Date">Oct 09, 2024</td>
+                                    <td data-label="Type">Retrieval</td>
+                                    <td data-label="Description">Box #AV-2023-01247 — Patient Records Archive</td>
+                                    <td data-label="Status"><span class="dash-status completed"><span class="dash-status-dot"></span> Delivered</span></td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Date">Oct 04, 2024</td>
+                                    <td data-label="Type">Audit</td>
+                                    <td data-label="Description">Quarterly Barcode Audit — Vault Bay 04</td>
+                                    <td data-label="Status"><span class="dash-status completed"><span class="dash-status-dot"></span> Verified</span></td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Date">Sep 28, 2024</td>
+                                    <td data-label="Type">Billing</td>
+                                    <td data-label="Description">Invoice #INV-2024-0074 Auto-Payment Cleared</td>
+                                    <td data-label="Status"><span class="dash-status completed"><span class="dash-status-dot"></span> Paid</span></td>
+                                </tr>
                             </tbody>
                         </table>
+                    </div>
+                </div>
+
+                <!-- Section: Storage Capacity & Quick Operations -->
+                <div class="dash-grid-2">
+                    <!-- Left: Storage Allocation & Facility Telemetry -->
+                    <div class="dash-panel">
+                        <div class="dash-panel-header">
+                            <h3 class="dash-panel-title"><i class="fas fa-warehouse"></i> Vault Storage Utilization</h3>
+                            <span class="dash-status active" style="font-size:0.75rem;"><span class="dash-status-dot"></span> Professional Plan</span>
+                        </div>
+                        <div class="dash-capacity-bar-wrap">
+                            <div class="dash-capacity-labels">
+                                <span>Total Box Capacity</span>
+                                <span>425 / 500 Boxes (85%)</span>
+                            </div>
+                            <div class="dash-progress-track">
+                                <div class="dash-progress-fill" style="width: 85%;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Departmental Breakdown -->
+                        <div class="dash-dept-bars">
+                            <div class="dash-dept-item">
+                                <div class="dash-dept-header">
+                                    <span>Legal & Corporate Contracts</span>
+                                    <strong>150 boxes (35%)</strong>
+                                </div>
+                                <div class="dash-dept-track">
+                                    <div class="dash-dept-fill" style="width: 35%; background: #6366f1;"></div>
+                                </div>
+                            </div>
+                            <div class="dash-dept-item">
+                                <div class="dash-dept-header">
+                                    <span>Financial & Tax Records</span>
+                                    <strong>120 boxes (28%)</strong>
+                                </div>
+                                <div class="dash-dept-track">
+                                    <div class="dash-dept-fill" style="width: 28%; background: #8b5cf6;"></div>
+                                </div>
+                            </div>
+                            <div class="dash-dept-item">
+                                <div class="dash-dept-header">
+                                    <span>HR & Personnel Archives</span>
+                                    <strong>95 boxes (22%)</strong>
+                                </div>
+                                <div class="dash-dept-track">
+                                    <div class="dash-dept-fill" style="width: 22%; background: #ec4899;"></div>
+                                </div>
+                            </div>
+                            <div class="dash-dept-item">
+                                <div class="dash-dept-header">
+                                    <span>Medical & Compliance Dossiers</span>
+                                    <strong>60 boxes (15%)</strong>
+                                </div>
+                                <div class="dash-dept-track">
+                                    <div class="dash-dept-fill" style="width: 15%; background: #10b981;"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Environmental Telemetry -->
+                        <div class="dash-telemetry-pills">
+                            <div class="dash-telemetry-pill">
+                                <i class="fas fa-temperature-half"></i> Climate: 68°F / 45% RH (Optimal)
+                            </div>
+                            <div class="dash-telemetry-pill">
+                                <i class="fas fa-shield-halved"></i> Vault Bay: Secure Bay 04
+                            </div>
+                            <div class="dash-telemetry-pill">
+                                <i class="fas fa-fire-extinguisher"></i> Suppression: FM-200 Active
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Quick Vault Operations -->
+                    <div class="dash-panel">
+                        <div class="dash-panel-header">
+                            <h3 class="dash-panel-title"><i class="fas fa-bolt"></i> Quick Vault Operations</h3>
+                        </div>
+                        <div class="dash-ops-grid">
+                            <div class="dash-ops-card" onclick="document.querySelector('.dash-nav-item[data-tab=\'inventory\']').click();">
+                                <div class="dash-ops-icon"><i class="fas fa-box-archive"></i></div>
+                                <div class="dash-ops-title">Request Box Pickup</div>
+                                <p class="dash-ops-desc">Schedule secure pickup of new boxed archives from your office.</p>
+                            </div>
+                            <div class="dash-ops-card" onclick="document.querySelector('.dash-nav-item[data-tab=\'retrieval\']').click();">
+                                <div class="dash-ops-icon"><i class="fas fa-truck-ramp-box"></i></div>
+                                <div class="dash-ops-title">Schedule Retrieval</div>
+                                <p class="dash-ops-desc">Dispatch physical cartons or emergency courier deliveries.</p>
+                            </div>
+                            <div class="dash-ops-card" onclick="document.querySelector('.dash-nav-item[data-tab=\'scanning\']').click();">
+                                <div class="dash-ops-icon"><i class="fas fa-file-import"></i></div>
+                                <div class="dash-ops-title">Digitize on Demand</div>
+                                <p class="dash-ops-desc">Request full-text OCR scan & deliver PDF/A to your digital portal.</p>
+                            </div>
+                            <div class="dash-ops-card" onclick="document.querySelector('.dash-nav-item[data-tab=\'billing\']').click();">
+                                <div class="dash-ops-icon"><i class="fas fa-receipt"></i></div>
+                                <div class="dash-ops-title">Review Invoicing</div>
+                                <p class="dash-ops-desc">View monthly storage statements, payment methods, and receipts.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -227,7 +355,7 @@
                         <div style="display:flex;gap:8px;flex-wrap:wrap;">
                             <div class="dash-search-box" style="min-width:200px;">
                                 <i class="fas fa-search"></i>
-                                <input type="text" placeholder="Search boxes...">
+                                <input type="text" id="boxSearchInput" placeholder="Search boxes...">
                             </div>
                             <button class="dash-hdr-pill-btn primary"><i class="fas fa-plus"></i> Request Pickup</button>
                         </div>
@@ -245,7 +373,7 @@
                                     <th>Action</th>
                                 </tr>
                             </thead>
-                            <tbody>
+                            <tbody id="boxInventoryTbody">
                                 <tr>
                                     <td data-label="Box ID"><strong>AV-2024-00891</strong></td>
                                     <td data-label="Description">HR Records Q2 2024</td>
@@ -290,6 +418,137 @@
                                     <td data-label="Retention">7 Years</td>
                                     <td data-label="Status"><span class="dash-status active"><span class="dash-status-dot"></span> In Vault</span></td>
                                     <td data-label="Action"><button class="dash-hdr-pill-btn"><i class="fas fa-truck-fast"></i> Retrieve</button></td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Box ID"><strong>AV-2023-00814</strong></td>
+                                    <td data-label="Description">Board Minutes & Shareholder Deeds</td>
+                                    <td data-label="Department">Executive</td>
+                                    <td data-label="Date Stored">May 18, 2023</td>
+                                    <td data-label="Retention">Permanent</td>
+                                    <td data-label="Status"><span class="dash-status active"><span class="dash-status-dot"></span> In Vault</span></td>
+                                    <td data-label="Action"><button class="dash-hdr-pill-btn"><i class="fas fa-truck-fast"></i> Retrieve</button></td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Box ID"><strong>AV-2023-00650</strong></td>
+                                    <td data-label="Description">Intellectual Property & Patents</td>
+                                    <td data-label="Department">R&D / Legal</td>
+                                    <td data-label="Date Stored">Apr 02, 2023</td>
+                                    <td data-label="Retention">20 Years</td>
+                                    <td data-label="Status"><span class="dash-status active"><span class="dash-status-dot"></span> In Vault</span></td>
+                                    <td data-label="Action"><button class="dash-hdr-pill-btn"><i class="fas fa-truck-fast"></i> Retrieve</button></td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Box ID"><strong>AV-2022-01189</strong></td>
+                                    <td data-label="Description">Annual Payroll Records 2020-2022</td>
+                                    <td data-label="Department">Payroll</td>
+                                    <td data-label="Date Stored">Dec 14, 2022</td>
+                                    <td data-label="Retention">7 Years</td>
+                                    <td data-label="Status"><span class="dash-status active"><span class="dash-status-dot"></span> In Vault</span></td>
+                                    <td data-label="Action"><button class="dash-hdr-pill-btn"><i class="fas fa-truck-fast"></i> Retrieve</button></td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Box ID"><strong>AV-2022-00941</strong></td>
+                                    <td data-label="Description">Litigation Case Files #410-485</td>
+                                    <td data-label="Department">Legal</td>
+                                    <td data-label="Date Stored">Sep 29, 2022</td>
+                                    <td data-label="Retention">10 Years</td>
+                                    <td data-label="Status"><span class="dash-status pending"><span class="dash-status-dot"></span> Checked Out</span></td>
+                                    <td data-label="Action"><button class="dash-hdr-pill-btn"><i class="fas fa-rotate-left"></i> Return</button></td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Box ID"><strong>AV-2022-00412</strong></td>
+                                    <td data-label="Description">Environmental Compliance Audits</td>
+                                    <td data-label="Department">Operations</td>
+                                    <td data-label="Date Stored">Feb 11, 2022</td>
+                                    <td data-label="Retention">10 Years</td>
+                                    <td data-label="Status"><span class="dash-status active"><span class="dash-status-dot"></span> In Vault</span></td>
+                                    <td data-label="Action"><button class="dash-hdr-pill-btn"><i class="fas fa-truck-fast"></i> Retrieve</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Section: Retention Lifecycle & Scheduled Destruction Reviews -->
+                <div class="dash-panel" style="margin-top:24px;">
+                    <div class="dash-panel-header">
+                        <h3 class="dash-panel-title"><i class="fas fa-clock-rotate-left"></i> Retention Lifecycles & Scheduled Destruction Reviews</h3>
+                        <span class="dash-status pending" style="font-size:0.75rem;"><span class="dash-status-dot"></span> 33 Boxes Eligible</span>
+                    </div>
+
+                    <!-- Retention KPIs -->
+                    <div class="dash-retention-kpis">
+                        <div class="dash-retention-kpi-card">
+                            <i class="fas fa-box-archive"></i>
+                            <div>
+                                <div class="dash-retention-kpi-num">340</div>
+                                <div class="dash-retention-kpi-label">Active Protected Records</div>
+                            </div>
+                        </div>
+                        <div class="dash-retention-kpi-card">
+                            <i class="fas fa-hourglass-half"></i>
+                            <div>
+                                <div class="dash-retention-kpi-num">52</div>
+                                <div class="dash-retention-kpi-label">Expiring in Next 90 Days</div>
+                            </div>
+                        </div>
+                        <div class="dash-retention-kpi-card">
+                            <i class="fas fa-certificate"></i>
+                            <div>
+                                <div class="dash-retention-kpi-num">33</div>
+                                <div class="dash-retention-kpi-label">Ready for Certified Shredding</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Retention Schedule Table -->
+                    <div class="dash-table-responsive">
+                        <table class="dash-table-custom dash-retention-table">
+                            <thead>
+                                <tr>
+                                    <th>Box ID</th>
+                                    <th>Archive &amp; Retention Policy</th>
+                                    <th>Legal Expiration</th>
+                                    <th>Compliance Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td data-label="Box ID"><strong>AV-2017-00341</strong></td>
+                                    <td data-label="Record">
+                                        <div class="dash-ret-cell-wrap">
+                                            <div class="dash-ret-title">HR Personnel Files 2017 (Terminated)</div>
+                                            <div class="dash-ret-policy-tag"><i class="fas fa-scale-balanced"></i> 7 Years &bull; FLSA / EEOC</div>
+                                        </div>
+                                    </td>
+                                    <td data-label="Expiration">Nov 15, 2024</td>
+                                    <td data-label="Status"><span class="dash-status pending"><span class="dash-status-dot"></span> Ready for Shred</span></td>
+                                    <td data-label="Action"><button class="dash-hdr-pill-btn primary" onclick="alert('Destruction authorization requested for AV-2017-00341. A certificate of destruction will be issued upon completion.');"><i class="fas fa-fire-burner"></i> Shred</button></td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Box ID"><strong>AV-2014-00129</strong></td>
+                                    <td data-label="Record">
+                                        <div class="dash-ret-cell-wrap">
+                                            <div class="dash-ret-title">Commercial Real Estate Leases 2014</div>
+                                            <div class="dash-ret-policy-tag"><i class="fas fa-scale-balanced"></i> 10 Years &bull; Corporate Bylaws</div>
+                                        </div>
+                                    </td>
+                                    <td data-label="Expiration">Dec 01, 2024</td>
+                                    <td data-label="Status"><span class="dash-status active"><span class="dash-status-dot"></span> Review Pending</span></td>
+                                    <td data-label="Action"><button class="dash-hdr-pill-btn" onclick="alert('Retention period for AV-2014-00129 extended by 3 years.');"><i class="fas fa-calendar-plus"></i> Extend</button></td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Box ID"><strong>AV-2018-00512</strong></td>
+                                    <td data-label="Record">
+                                        <div class="dash-ret-cell-wrap">
+                                            <div class="dash-ret-title">Accounts Payable Vouchers Q1-Q4 2017</div>
+                                            <div class="dash-ret-policy-tag"><i class="fas fa-scale-balanced"></i> 6 Years &bull; IRS Audit Standard</div>
+                                        </div>
+                                    </td>
+                                    <td data-label="Expiration">Dec 20, 2024</td>
+                                    <td data-label="Status"><span class="dash-status pending"><span class="dash-status-dot"></span> Ready for Shred</span></td>
+                                    <td data-label="Action"><button class="dash-hdr-pill-btn primary" onclick="alert('Destruction authorization requested for AV-2018-00512.');"><i class="fas fa-fire-burner"></i> Shred</button></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -371,6 +630,80 @@
                                 </tbody>
                             </table>
                         </div>
+
+                        <!-- Automated Retrieval Dispatch Media Card -->
+                        <div class="dash-retrieval-media-card">
+                            <div class="dash-retrieval-media-frame">
+                                <img src="assets/images/automated-vault-storage.jpg" alt="High-density robotic automated storage and retrieval system picking archival cartons" loading="lazy">
+                                <div class="dash-retrieval-overlay"></div>
+                                <div class="dash-retrieval-badge-top">
+                                    <i class="fas fa-robot"></i> Robotic ASRS Crane Bay 04 Active
+                                </div>
+                                <div class="dash-retrieval-badge-bottom">
+                                    <div class="dash-retrieval-stat">
+                                        <i class="fas fa-barcode"></i>
+                                        <span>Optical Barcode Verification: 100%</span>
+                                    </div>
+                                    <div class="dash-retrieval-stat">
+                                        <i class="fas fa-stopwatch"></i>
+                                        <span>Avg. Pull Time: 4.2 Min</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: Live Courier Dispatch & Chain-of-Custody Tracking -->
+                <div class="dash-panel" style="margin-top:24px;">
+                    <div class="dash-panel-header">
+                        <h3 class="dash-panel-title"><i class="fas fa-route"></i> Live Dispatch & Custody Chain — Request #RET-4521</h3>
+                        <span class="dash-status pending" style="font-size:0.75rem;"><span class="dash-status-dot"></span> In Transit — Est. 2:30 PM</span>
+                    </div>
+
+                    <!-- 5-Step Visual Timeline -->
+                    <div class="dash-tracking-timeline">
+                        <div class="dash-track-step done">
+                            <div class="dash-track-circle"><i class="fas fa-check"></i></div>
+                            <div class="dash-track-title">Vault Check-Out</div>
+                            <div class="dash-track-time">Oct 20 • 08:30 AM</div>
+                        </div>
+                        <div class="dash-track-step done">
+                            <div class="dash-track-circle"><i class="fas fa-check"></i></div>
+                            <div class="dash-track-title">Tamper Seal Applied</div>
+                            <div class="dash-track-time">Oct 20 • 09:15 AM</div>
+                        </div>
+                        <div class="dash-track-step done">
+                            <div class="dash-track-circle"><i class="fas fa-check"></i></div>
+                            <div class="dash-track-title">Van Dispatched</div>
+                            <div class="dash-track-time">Oct 20 • 10:00 AM</div>
+                        </div>
+                        <div class="dash-track-step active">
+                            <div class="dash-track-circle"><i class="fas fa-truck-fast"></i></div>
+                            <div class="dash-track-title">Out for Delivery</div>
+                            <div class="dash-track-time">In Progress • On Route</div>
+                        </div>
+                        <div class="dash-track-step">
+                            <div class="dash-track-circle"><i class="fas fa-signature"></i></div>
+                            <div class="dash-track-title">Recipient Sign-Off</div>
+                            <div class="dash-track-time">Pending Delivery</div>
+                        </div>
+                    </div>
+
+                    <!-- Courier Info Strip -->
+                    <div class="dash-courier-details-strip">
+                        <div>
+                            <span style="color:var(--text-muted);font-size:0.75rem;display:block;">Dedicated Courier</span>
+                            <strong><i class="fas fa-user-shield" style="color:var(--secondary);margin-right:6px;"></i> Marcus Vance (ID #DRV-882)</strong>
+                        </div>
+                        <div>
+                            <span style="color:var(--text-muted);font-size:0.75rem;display:block;">Vehicle & Telemetry</span>
+                            <strong><i class="fas fa-van-shuttle" style="color:var(--secondary);margin-right:6px;"></i> Climate Van #04 • GPS Tracking Active</strong>
+                        </div>
+                        <div>
+                            <span style="color:var(--text-muted);font-size:0.75rem;display:block;">Security Handshake</span>
+                            <span class="dash-status completed" style="font-size:0.72rem;"><span class="dash-status-dot"></span> Dual Barcode Verified</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -420,42 +753,151 @@
 
                     <!-- Active Scan Jobs -->
                     <div class="dash-panel">
-                        <h3 class="dash-panel-title" style="margin-bottom:20px;"><i class="fas fa-list-check"></i> Scan Jobs</h3>
+                        <div class="dash-panel-header">
+                            <h3 class="dash-panel-title"><i class="fas fa-list-check"></i> Scan Jobs</h3>
+                            <span class="dash-status active" style="font-size:0.72rem;"><span class="dash-status-dot"></span> 1 In Progress</span>
+                        </div>
                         <div class="dash-table-responsive">
                             <table class="dash-table-custom">
                                 <thead>
                                     <tr>
                                         <th>Job ID</th>
                                         <th>Box</th>
-                                        <th>Pages</th>
+                                        <th class="text-center">Pages</th>
                                         <th>Status</th>
-                                        <th>Action</th>
+                                        <th class="text-right">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td data-label="Job ID"><strong>SCN-1089</strong></td>
-                                        <td data-label="Box">AV-2024-00891</td>
-                                        <td data-label="Pages">85</td>
+                                        <td data-label="Box" class="dash-box-cell">AV-2024-00891</td>
+                                        <td data-label="Pages" class="text-center">85</td>
                                         <td data-label="Status"><span class="dash-status completed"><span class="dash-status-dot"></span> Ready</span></td>
-                                        <td data-label="Action"><button class="dash-hdr-pill-btn primary"><i class="fas fa-download"></i> Download</button></td>
+                                        <td data-label="Action" class="text-right"><button class="dash-hdr-pill-btn primary"><i class="fas fa-download"></i> Download</button></td>
                                     </tr>
                                     <tr>
                                         <td data-label="Job ID"><strong>SCN-1086</strong></td>
-                                        <td data-label="Box">AV-2024-00632</td>
-                                        <td data-label="Pages">210</td>
+                                        <td data-label="Box" class="dash-box-cell">AV-2024-00632</td>
+                                        <td data-label="Pages" class="text-center">210</td>
                                         <td data-label="Status"><span class="dash-status pending"><span class="dash-status-dot"></span> In Progress</span></td>
-                                        <td data-label="Action"><span style="font-size:0.78rem;color:var(--text-muted);">Est. 4 hrs</span></td>
+                                        <td data-label="Action" class="text-right"><span class="dash-est-time"><i class="fas fa-clock"></i> Est. 4 hrs</span></td>
                                     </tr>
                                     <tr>
                                         <td data-label="Job ID"><strong>SCN-1080</strong></td>
-                                        <td data-label="Box">AV-2023-00998</td>
-                                        <td data-label="Pages">955</td>
+                                        <td data-label="Box" class="dash-box-cell">AV-2023-00998</td>
+                                        <td data-label="Pages" class="text-center">955</td>
                                         <td data-label="Status"><span class="dash-status completed"><span class="dash-status-dot"></span> Ready</span></td>
-                                        <td data-label="Action"><button class="dash-hdr-pill-btn primary"><i class="fas fa-download"></i> Download</button></td>
+                                        <td data-label="Action" class="text-right"><button class="dash-hdr-pill-btn primary"><i class="fas fa-download"></i> Download</button></td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="Job ID"><strong>SCN-1074</strong></td>
+                                        <td data-label="Box" class="dash-box-cell">AV-2024-00765</td>
+                                        <td data-label="Pages" class="text-center">320</td>
+                                        <td data-label="Status"><span class="dash-status completed"><span class="dash-status-dot"></span> Ready</span></td>
+                                        <td data-label="Action" class="text-right"><button class="dash-hdr-pill-btn primary"><i class="fas fa-download"></i> Download</button></td>
                                     </tr>
                                 </tbody>
                             </table>
+                        </div>
+
+                        <!-- Digitization Throughput Status Strip -->
+                        <div class="dash-scanning-status-strip">
+                            <div class="strip-item">
+                                <i class="fas fa-microchip"></i>
+                                <span>OCR Engine: <strong>Full-Text OCR Active</strong></span>
+                            </div>
+                            <div class="strip-item">
+                                <i class="fas fa-file-pdf"></i>
+                                <span>Output: <strong>PDF/A 300 DPI</strong></span>
+                            </div>
+                        </div>
+
+                        <!-- High-Throughput Digitization & AI OCR Media Card -->
+                        <div class="dash-scanning-media-card">
+                            <div class="dash-scanning-media-frame">
+                                <img src="assets/images/ai-ocr-pipeline-engineers.jpg" alt="High-throughput archival document digitization and AI OCR processing center" loading="lazy">
+                                <div class="dash-scanning-overlay"></div>
+                                <div class="dash-scanning-badge-top">
+                                    <i class="fas fa-microchip"></i> AI OCR Digitization Station Bay 02 Active
+                                </div>
+                                <div class="dash-scanning-badge-bottom">
+                                    <div class="dash-scanning-stat">
+                                        <i class="fas fa-wand-magic-sparkles"></i>
+                                        <span>Optical Recognition Accuracy: 99.8%</span>
+                                    </div>
+                                    <div class="dash-scanning-stat">
+                                        <i class="fas fa-gauge-high"></i>
+                                        <span>Throughput: 140 ppm</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: Digital Document Repository & OCR File Library -->
+                <div class="dash-panel" style="margin-top:24px;">
+                    <div class="dash-panel-header">
+                        <h3 class="dash-panel-title"><i class="fas fa-folder-open"></i> Digitized Document Repository & Ready Downloads</h3>
+                        <span class="dash-status active" style="font-size:0.75rem;"><span class="dash-status-dot"></span> 4 Files Ready</span>
+                    </div>
+
+                    <div class="dash-digital-grid">
+                        <div class="dash-file-card">
+                            <div class="dash-file-top">
+                                <div class="dash-file-icon"><i class="fas fa-file-pdf"></i></div>
+                                <div class="dash-file-info">
+                                    <div class="dash-file-name" title="Invoice-Batch-Q3-2024.pdf">Invoice-Batch-Q3-2024.pdf</div>
+                                    <div class="dash-file-meta">85 Pages &bull; 14.2 MB &bull; PDF/A</div>
+                                </div>
+                            </div>
+                            <div class="dash-file-actions">
+                                <button class="dash-hdr-pill-btn" style="flex:1;justify-content:center;" onclick="alert('Viewing preview for Invoice-Batch-Q3-2024.pdf');"><i class="fas fa-eye"></i> Preview</button>
+                                <button class="dash-hdr-pill-btn primary" style="flex:1;justify-content:center;" onclick="alert('Downloading Invoice-Batch-Q3-2024.pdf');"><i class="fas fa-download"></i> Download</button>
+                            </div>
+                        </div>
+
+                        <div class="dash-file-card">
+                            <div class="dash-file-top">
+                                <div class="dash-file-icon"><i class="fas fa-file-pdf"></i></div>
+                                <div class="dash-file-info">
+                                    <div class="dash-file-name" title="Patent-Filings-PT-442.pdf">Patent-Filings-PT-442.pdf</div>
+                                    <div class="dash-file-meta">210 Pages &bull; 38.6 MB &bull; OCR 99.8%</div>
+                                </div>
+                            </div>
+                            <div class="dash-file-actions">
+                                <button class="dash-hdr-pill-btn" style="flex:1;justify-content:center;" onclick="alert('Viewing preview for Patent-Filings-PT-442.pdf');"><i class="fas fa-eye"></i> Preview</button>
+                                <button class="dash-hdr-pill-btn primary" style="flex:1;justify-content:center;" onclick="alert('Downloading Patent-Filings-PT-442.pdf');"><i class="fas fa-download"></i> Download</button>
+                            </div>
+                        </div>
+
+                        <div class="dash-file-card">
+                            <div class="dash-file-top">
+                                <div class="dash-file-icon"><i class="fas fa-file-pdf"></i></div>
+                                <div class="dash-file-info">
+                                    <div class="dash-file-name" title="Tax-Documents-2021-2022.pdf">Tax-Documents-2021-2022.pdf</div>
+                                    <div class="dash-file-meta">955 Pages &bull; 142 MB &bull; High Res</div>
+                                </div>
+                            </div>
+                            <div class="dash-file-actions">
+                                <button class="dash-hdr-pill-btn" style="flex:1;justify-content:center;" onclick="alert('Viewing preview for Tax-Documents-2021-2022.pdf');"><i class="fas fa-eye"></i> Preview</button>
+                                <button class="dash-hdr-pill-btn primary" style="flex:1;justify-content:center;" onclick="alert('Downloading Tax-Documents-2021-2022.pdf');"><i class="fas fa-download"></i> Download</button>
+                            </div>
+                        </div>
+
+                        <div class="dash-file-card">
+                            <div class="dash-file-top">
+                                <div class="dash-file-icon"><i class="fas fa-file-pdf"></i></div>
+                                <div class="dash-file-info">
+                                    <div class="dash-file-name" title="Legal-Contracts-Master-2023.pdf">Legal-Contracts-Master-2023.pdf</div>
+                                    <div class="dash-file-meta">320 Pages &bull; 54.8 MB &bull; PDF/A</div>
+                                </div>
+                            </div>
+                            <div class="dash-file-actions">
+                                <button class="dash-hdr-pill-btn" style="flex:1;justify-content:center;" onclick="alert('Viewing preview for Legal-Contracts-Master-2023.pdf');"><i class="fas fa-eye"></i> Preview</button>
+                                <button class="dash-hdr-pill-btn primary" style="flex:1;justify-content:center;" onclick="alert('Downloading Legal-Contracts-Master-2023.pdf');"><i class="fas fa-download"></i> Download</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -464,7 +906,7 @@
             <!-- ============ TAB: BILLING ============ -->
             <div class="dash-tab-content" id="tab-billing">
                 <!-- Billing Summary -->
-                <div class="dash-metrics" style="grid-template-columns:repeat(3,1fr);">
+                <div class="dash-metrics dash-metrics-3">
                     <div class="dash-metric-card">
                         <div class="dash-metric-header">
                             <div class="dash-metric-icon blue"><i class="fas fa-file-invoice-dollar"></i></div>
@@ -533,8 +975,96 @@
                                     <td data-label="Status"><span class="dash-status completed"><span class="dash-status-dot"></span> Paid</span></td>
                                     <td data-label="Action"><button class="dash-hdr-pill-btn"><i class="fas fa-download"></i> Download</button></td>
                                 </tr>
+                                <tr>
+                                    <td data-label="Invoice #"><strong>INV-2024-0035</strong></td>
+                                    <td data-label="Period">June 2024</td>
+                                    <td data-label="Amount">$135.00</td>
+                                    <td data-label="Status"><span class="dash-status completed"><span class="dash-status-dot"></span> Paid</span></td>
+                                    <td data-label="Action"><button class="dash-hdr-pill-btn"><i class="fas fa-download"></i> Download</button></td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Invoice #"><strong>INV-2024-0022</strong></td>
+                                    <td data-label="Period">May 2024</td>
+                                    <td data-label="Amount">$131.25</td>
+                                    <td data-label="Status"><span class="dash-status completed"><span class="dash-status-dot"></span> Paid</span></td>
+                                    <td data-label="Action"><button class="dash-hdr-pill-btn"><i class="fas fa-download"></i> Download</button></td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Invoice #"><strong>INV-2024-0010</strong></td>
+                                    <td data-label="Period">April 2024</td>
+                                    <td data-label="Amount">$127.50</td>
+                                    <td data-label="Status"><span class="dash-status completed"><span class="dash-status-dot"></span> Paid</span></td>
+                                    <td data-label="Action"><button class="dash-hdr-pill-btn"><i class="fas fa-download"></i> Download</button></td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Invoice #"><strong>INV-2024-0003</strong></td>
+                                    <td data-label="Period">March 2024</td>
+                                    <td data-label="Amount">$127.50</td>
+                                    <td data-label="Status"><span class="dash-status completed"><span class="dash-status-dot"></span> Paid</span></td>
+                                    <td data-label="Action"><button class="dash-hdr-pill-btn"><i class="fas fa-download"></i> Download</button></td>
+                                </tr>
+                                <tr>
+                                    <td data-label="Invoice #"><strong>INV-2024-0001</strong></td>
+                                    <td data-label="Period">February 2024</td>
+                                    <td data-label="Amount">$120.00</td>
+                                    <td data-label="Status"><span class="dash-status completed"><span class="dash-status-dot"></span> Paid</span></td>
+                                    <td data-label="Action"><button class="dash-hdr-pill-btn"><i class="fas fa-download"></i> Download</button></td>
+                                </tr>
                             </tbody>
                         </table>
+                    </div>
+                </div>
+
+                <!-- Section: Payment Methods & Billing Configuration -->
+                <div class="dash-grid-2" style="margin-top:24px;">
+                    <!-- Left: Saved Payment Methods -->
+                    <div class="dash-panel">
+                        <div class="dash-panel-header">
+                            <h3 class="dash-panel-title"><i class="fas fa-credit-card"></i> Saved Payment Methods</h3>
+                            <button class="dash-hdr-pill-btn primary" onclick="alert('Add payment method modal will open.');"><i class="fas fa-plus"></i> Add Method</button>
+                        </div>
+                        <div class="dash-pay-method-card">
+                            <div class="dash-pay-brand"><i class="fa-brands fa-cc-visa" style="color:#2563eb;"></i></div>
+                            <div class="dash-pay-details">
+                                <div class="dash-pay-title">Visa Corporate ending in 4242</div>
+                                <div class="dash-pay-sub">Expires 08/2028 • Auto-Pay Active</div>
+                            </div>
+                            <span class="dash-status completed" style="font-size:0.7rem;"><span class="dash-status-dot"></span> Default</span>
+                        </div>
+                        <div class="dash-pay-method-card">
+                            <div class="dash-pay-brand"><i class="fa-brands fa-cc-mastercard" style="color:#ea580c;"></i></div>
+                            <div class="dash-pay-details">
+                                <div class="dash-pay-title">Mastercard Business ending in 8819</div>
+                                <div class="dash-pay-sub">Expires 11/2027 • Secondary Backup</div>
+                            </div>
+                            <button class="dash-hdr-pill-btn" onclick="alert('Mastercard set as default payment method.');">Set Default</button>
+                        </div>
+                    </div>
+
+                    <!-- Right: Tax & Billing Entity Preferences -->
+                    <div class="dash-panel">
+                        <div class="dash-panel-header">
+                            <h3 class="dash-panel-title"><i class="fas fa-file-lines"></i> Invoicing & Tax Profile</h3>
+                        </div>
+                        <div style="display:flex;flex-direction:column;gap:12px;font-size:0.85rem;">
+                            <div style="display:flex;justify-content:space-between;padding-bottom:10px;border-bottom:1px solid var(--border-light);">
+                                <span style="color:var(--text-muted);">Billing Entity</span>
+                                <strong>Axion Legal Partners LLP</strong>
+                            </div>
+                            <div style="display:flex;justify-content:space-between;padding-bottom:10px;border-bottom:1px solid var(--border-light);">
+                                <span style="color:var(--text-muted);">Tax ID / EIN</span>
+                                <strong>US-94-2819034</strong>
+                            </div>
+                            <div style="display:flex;justify-content:space-between;padding-bottom:10px;border-bottom:1px solid var(--border-light);">
+                                <span style="color:var(--text-muted);">Invoice Delivery</span>
+                                <strong>Email PDF + Client Portal</strong>
+                            </div>
+                            <div style="display:flex;justify-content:space-between;padding-bottom:10px;border-bottom:1px solid var(--border-light);">
+                                <span style="color:var(--text-muted);">Billing Contact</span>
+                                <strong>accounting@axionlegal.com</strong>
+                            </div>
+                            <button class="dash-hdr-pill-btn" style="align-self:flex-start;margin-top:6px;" onclick="alert('YTD Financial Ledger PDF downloading...');"><i class="fas fa-file-arrow-down"></i> Download 2024 YTD Statement (PDF)</button>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -608,6 +1138,78 @@
                         </div>
                     </div>
                 </div>
+
+                <!-- Section: Security & Authorized Vault Delegates -->
+                <div class="dash-panel" style="margin-top:24px;">
+                    <div class="dash-panel-header">
+                        <h3 class="dash-panel-title"><i class="fas fa-shield-halved"></i> Security & Authorized Vault Delegates</h3>
+                        <span class="dash-status active" style="font-size:0.75rem;"><span class="dash-status-dot"></span> 2FA Enforced</span>
+                    </div>
+
+                    <div class="dash-grid-2">
+                        <!-- Left: Authorized Pickup & Inspection Delegates -->
+                        <div>
+                            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+                                <h4 style="font-size:0.88rem;font-weight:600;margin:0;">Authorized Vault Delegates</h4>
+                                <button class="dash-hdr-pill-btn primary" onclick="alert('Add authorized delegate modal opened.');"><i class="fas fa-user-plus"></i> Add Delegate</button>
+                            </div>
+                            <div class="dash-delegate-list">
+                                <div class="dash-delegate-item">
+                                    <div class="dash-delegate-avatar">SP</div>
+                                    <div class="dash-delegate-info">
+                                        <div class="dash-delegate-name">Sarah Patterson (You)</div>
+                                        <div class="dash-delegate-role">Managing Partner • Full Administrative Access</div>
+                                    </div>
+                                    <span class="dash-status completed" style="font-size:0.7rem;"><span class="dash-status-dot"></span> Primary</span>
+                                </div>
+                                <div class="dash-delegate-item">
+                                    <div class="dash-delegate-avatar" style="background:linear-gradient(135deg, #2563eb, #38bdf8);">DC</div>
+                                    <div class="dash-delegate-info">
+                                        <div class="dash-delegate-name">David Chen</div>
+                                        <div class="dash-delegate-role">Senior Associate • Retrieval & Inspection Authorization</div>
+                                    </div>
+                                    <span class="dash-status active" style="font-size:0.7rem;"><span class="dash-status-dot"></span> Active</span>
+                                </div>
+                                <div class="dash-delegate-item">
+                                    <div class="dash-delegate-avatar" style="background:linear-gradient(135deg, #059669, #34d399);">ER</div>
+                                    <div class="dash-delegate-info">
+                                        <div class="dash-delegate-name">Elena Rostova</div>
+                                        <div class="dash-delegate-role">Records Custodian • Pickup & Destruction Sign-Off</div>
+                                    </div>
+                                    <span class="dash-status active" style="font-size:0.7rem;"><span class="dash-status-dot"></span> Active</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right: Authentication & Session Safeguards -->
+                        <div>
+                            <h4 style="font-size:0.88rem;font-weight:600;margin:0 0 14px 0;">Authentication & Active Sessions</h4>
+                            <div style="display:flex;flex-direction:column;gap:12px;font-size:0.85rem;">
+                                <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 14px;background:var(--bg-alt);border:1px solid var(--border);border-radius:var(--radius-md);">
+                                    <div>
+                                        <strong>Two-Factor Authentication (2FA)</strong>
+                                        <div style="font-size:0.75rem;color:var(--text-muted);margin-top:2px;">Hardware Security Key / Google Authenticator</div>
+                                    </div>
+                                    <span class="dash-status completed" style="font-size:0.7rem;"><span class="dash-status-dot"></span> Enabled</span>
+                                </div>
+                                <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 14px;background:var(--bg-alt);border:1px solid var(--border);border-radius:var(--radius-md);">
+                                    <div>
+                                        <strong>Portal Password</strong>
+                                        <div style="font-size:0.75rem;color:var(--text-muted);margin-top:2px;">Last updated 42 days ago • Compliant</div>
+                                    </div>
+                                    <button class="dash-hdr-pill-btn" onclick="alert('Password change dialog opened.');">Update</button>
+                                </div>
+                                <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 14px;background:var(--bg-alt);border:1px solid var(--border);border-radius:var(--radius-md);">
+                                    <div>
+                                        <strong>Current Active Session</strong>
+                                        <div style="font-size:0.75rem;color:var(--text-muted);margin-top:2px;">Windows 11 • Chrome 129 • Dallas, TX (IP 198.51.100.24)</div>
+                                    </div>
+                                    <span class="dash-status active" style="font-size:0.7rem;"><span class="dash-status-dot"></span> Current</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -619,6 +1221,15 @@
 document.addEventListener('DOMContentLoaded', () => {
     const navItems = document.querySelectorAll('.dash-nav-item[data-tab]');
     const tabContents = document.querySelectorAll('.dash-tab-content');
+    const headerTitle = document.getElementById('dashHeaderTitle');
+    const tabTitles = {
+        'overview': '<span class="dash-title-prefix">Dashboard </span>Overview',
+        'inventory': 'Box Inventory',
+        'retrieval': 'Retrieval Requests',
+        'scanning': 'Scanning Requests',
+        'billing': 'Billing & Invoices',
+        'settings': 'Account Settings'
+    };
 
     navItems.forEach(item => {
         item.addEventListener('click', () => {
@@ -627,6 +1238,11 @@ document.addEventListener('DOMContentLoaded', () => {
             // Update nav
             navItems.forEach(n => n.classList.remove('active'));
             item.classList.add('active');
+
+            // Update header title
+            if (headerTitle && tabTitles[tabId]) {
+                headerTitle.innerHTML = tabTitles[tabId];
+            }
 
             // Update content
             tabContents.forEach(t => t.classList.remove('active'));
@@ -672,7 +1288,98 @@ document.addEventListener('DOMContentLoaded', () => {
             notifDropdown.classList.remove('open');
         });
     }
+
+    // Logout Confirmation Modal (2 Options: Cancel or Confirm Logout)
+    const logoutTriggerBtn = document.getElementById('logoutTriggerBtn');
+    const logoutModalOverlay = document.getElementById('logoutModalOverlay');
+    const cancelLogoutBtn = document.getElementById('cancelLogoutBtn');
+    const closeLogoutModalBtn = document.getElementById('closeLogoutModalBtn');
+
+    function openLogoutModal() {
+        if (logoutModalOverlay) {
+            logoutModalOverlay.classList.add('open');
+            document.body.style.overflow = 'hidden';
+            if (cancelLogoutBtn) {
+                setTimeout(() => cancelLogoutBtn.focus(), 50);
+            }
+        }
+    }
+
+    function closeLogoutModal() {
+        if (logoutModalOverlay) {
+            logoutModalOverlay.classList.remove('open');
+            document.body.style.overflow = '';
+            if (logoutTriggerBtn) logoutTriggerBtn.focus();
+        }
+    }
+
+    if (logoutTriggerBtn) {
+        logoutTriggerBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openLogoutModal();
+        });
+    }
+
+    if (cancelLogoutBtn) {
+        cancelLogoutBtn.addEventListener('click', closeLogoutModal);
+    }
+
+    if (closeLogoutModalBtn) {
+        closeLogoutModalBtn.addEventListener('click', closeLogoutModal);
+    }
+
+    if (logoutModalOverlay) {
+        logoutModalOverlay.addEventListener('click', (e) => {
+            if (e.target === logoutModalOverlay) {
+                closeLogoutModal();
+            }
+        });
+    }
+
+    // Live Box Inventory Search Filter
+    const boxSearchInput = document.getElementById('boxSearchInput');
+    const boxInventoryTbody = document.getElementById('boxInventoryTbody');
+    if (boxSearchInput && boxInventoryTbody) {
+        boxSearchInput.addEventListener('input', () => {
+            const query = boxSearchInput.value.toLowerCase().trim();
+            const rows = boxInventoryTbody.querySelectorAll('tr');
+            rows.forEach(row => {
+                const text = row.textContent.toLowerCase();
+                row.style.display = text.includes(query) ? '' : 'none';
+            });
+        });
+    }
+
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && logoutModalOverlay && logoutModalOverlay.classList.contains('open')) {
+            closeLogoutModal();
+        }
+    });
 });
 </script>
+
+<!-- ============ LOGOUT CONFIRMATION MODAL ============ -->
+<div class="dash-modal-overlay" id="logoutModalOverlay" role="dialog" aria-modal="true" aria-labelledby="logoutModalTitle" aria-describedby="logoutModalDesc">
+    <div class="dash-modal">
+        <button type="button" class="dash-modal-close" id="closeLogoutModalBtn" aria-label="Close dialog">
+            <i class="fas fa-xmark"></i>
+        </button>
+        <div class="dash-modal-icon-badge danger">
+            <i class="fas fa-right-from-bracket"></i>
+        </div>
+        <div class="dash-modal-header-center">
+            <h3 id="logoutModalTitle">Sign Out of ArchiVault?</h3>
+            <p id="logoutModalDesc">Are you sure you want to end your current session? You will need to sign in again to access your records, vaults, and active requests.</p>
+        </div>
+        <div class="dash-modal-actions-2">
+            <button type="button" class="btn btn-secondary" id="cancelLogoutBtn" style="justify-content:center; width:100%;">
+                <i class="fas fa-xmark"></i> Cancel
+            </button>
+            <a href="login.html" class="btn btn-danger" id="confirmLogoutBtn" style="justify-content:center; width:100%; text-decoration:none;">
+                <i class="fas fa-right-from-bracket"></i> Yes, Log Out
+            </a>
+        </div>
+    </div>
+</div>
 </body>
 </html>

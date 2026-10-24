@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=1.0">
+    <link rel="stylesheet" href="style.css?v=5.6">
     <script>
         (function(){try{if(localStorage.getItem('av-dark')==='1'){document.documentElement.classList.add('dark')}if(localStorage.getItem('av-rtl')==='1'){document.documentElement.setAttribute('dir','rtl')}}catch(e){}})();
     </script>
@@ -21,7 +21,7 @@
 
 <main>
     <!-- Page Header -->
-    <section class="page-header">
+    <section class="page-header contact-header">
         <div class="container">
             <h1>Contact Us</h1>
             <p>Get in touch for a free consultation, custom quote, or any questions about our services.</p>
@@ -37,37 +37,44 @@
     <section class="section">
         <div class="container">
             <div class="contact-grid">
-                <!-- Contact Info -->
-                <div class="contact-info-card fade-up">
-                    <h3 style="font-size:1.15rem;font-weight:600;margin-bottom:8px;">Get In Touch</h3>
-                    <p style="font-size:0.875rem;color:var(--text-muted);margin-bottom:20px;">We'd love to hear from you. Reach out through any of the channels below or fill out the form and we'll respond within 24 hours.</p>
+                <!-- Left Column: Info & Visual Support Card -->
+                <div class="contact-left-col">
+                    <!-- Contact Info -->
+                    <div class="contact-info-card fade-up">
+                        <h3 style="font-size:1.15rem;font-weight:600;margin-bottom:8px;">Get In Touch</h3>
+                        <p style="font-size:0.875rem;color:var(--text-muted);margin-bottom:20px;">We'd love to hear from you. Reach out through any of the channels below or fill out the form and we'll respond within 24 hours.</p>
 
-                    <div class="contact-info-item">
-                        <div class="contact-info-icon"><i class="fas fa-location-dot"></i></div>
-                        <div class="contact-info-text">
-                            <h4>Headquarters</h4>
-                            <p>1200 Records Center Drive, Suite 400<br>Dallas, TX 75201, United States</p>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon"><i class="fas fa-location-dot"></i></div>
+                            <div class="contact-info-text">
+                                <h4>Headquarters</h4>
+                                <p>1200 Records Center Drive, Suite 400<br>Dallas, TX 75201, United States</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon"><i class="fas fa-phone"></i></div>
+                            <div class="contact-info-text">
+                                <h4>Phone</h4>
+                                <p>+1 (800) 123-4567 (Toll Free)<br>+1 (214) 555-0199 (Direct)</p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-info-text">
+                                <h4>Email</h4>
+                                <p>info@archivault.com<br>support@archivault.com</p>
+                            </div>
                         </div>
                     </div>
-                    <div class="contact-info-item">
-                        <div class="contact-info-icon"><i class="fas fa-phone"></i></div>
-                        <div class="contact-info-text">
-                            <h4>Phone</h4>
-                            <p>+1 (800) 123-4567 (Toll Free)<br>+1 (214) 555-0199 (Direct)</p>
-                        </div>
-                    </div>
-                    <div class="contact-info-item">
-                        <div class="contact-info-icon"><i class="fas fa-envelope"></i></div>
-                        <div class="contact-info-text">
-                            <h4>Email</h4>
-                            <p>info@archivault.com<br>support@archivault.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-info-item">
-                        <div class="contact-info-icon"><i class="fas fa-clock"></i></div>
-                        <div class="contact-info-text">
-                            <h4>Business Hours</h4>
-                            <p>Monday – Friday: 8:00 AM – 6:00 PM CST<br>Saturday: 9:00 AM – 1:00 PM CST</p>
+
+                    <!-- Visual Facility & Support Card -->
+                    <div class="contact-image-card fade-up">
+                        <div class="contact-image-frame">
+                            <img src="assets/images/contact-facility-support.jpg" alt="ArchiVault records management specialist conducting inventory audit in Dallas archival facility" loading="lazy">
+                            <div class="contact-image-overlay"></div>
+                            <div class="contact-image-badge">
+                                <span class="badge-dot green"></span> On-Site Archival Specialists Active
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -111,13 +118,38 @@
         </div>
     </section>
 
-    <!-- Map Placeholder -->
-    <section class="section-alt" style="padding:0;">
-        <div style="width:100%;height:350px;background:var(--bg-alt);display:flex;align-items:center;justify-content:center;border-top:1px solid var(--border);">
-            <div style="text-align:center;color:var(--text-muted);">
-                <i class="fas fa-map-location-dot" style="font-size:2.5rem;margin-bottom:12px;display:block;opacity:0.4;"></i>
-                <p style="font-size:0.9rem;">Interactive Map — 1200 Records Center Drive, Dallas, TX 75201</p>
-                <p style="font-size:0.78rem;margin-top:4px;">Replace this section with your preferred map embed</p>
+    <!-- Live Interactive Map Section -->
+    <section class="live-map-section">
+        <div class="container">
+            <div class="live-map-container">
+                <iframe 
+                    class="live-map-iframe"
+                    src="https://maps.google.com/maps?q=1200+Main+St,+Dallas,+TX+75202&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+                    width="100%" 
+                    height="440" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade"
+                    title="ArchiVault Primary Facility Live Map">
+                </iframe>
+
+                <!-- Floating Location Info Card -->
+                <div class="map-floating-card fade-up">
+                    <div class="map-card-badge">
+                        <span class="live-status-dot"></span> 24/7 Security Active
+                    </div>
+                    <h4>ArchiVault Primary Vault</h4>
+                    <p class="map-card-address"><i class="fas fa-location-dot"></i> 1200 Records Center Drive, Dallas, TX 75201</p>
+                    <div class="map-card-actions">
+                        <a href="https://maps.google.com/?q=1200+Main+St,+Dallas,+TX+75202" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+                            <i class="fas fa-diamond-turn-right"></i> Get Directions
+                        </a>
+                        <a href="tel:18005558285" class="btn btn-secondary btn-sm">
+                            <i class="fas fa-phone"></i> Call Facility
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -125,6 +157,6 @@
 
 <div id="footer-placeholder"></div>
 
-<script src="components.js"></script>
+<script src="components.js?v=5.6"></script>
 </body>
 </html>

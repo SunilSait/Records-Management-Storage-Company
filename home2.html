@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=1.0">
+    <link rel="stylesheet" href="style.css?v=7.4">
     <script>
         (function(){try{if(localStorage.getItem('av-dark')==='1'){document.documentElement.classList.add('dark')}if(localStorage.getItem('av-rtl')==='1'){document.documentElement.setAttribute('dir','rtl')}}catch(e){}})();
     </script>
@@ -20,68 +20,345 @@
 <div id="navbar-placeholder"></div>
 
 <main>
-    <!-- Hero Slider -->
+    <!-- Hero Slider Redesign -->
     <section class="hero2" id="heroSlider">
-        <!-- Slide 1 -->
+        <!-- Slide 1: Physical Records Vault & Telemetry -->
         <div class="hero-slide active" aria-hidden="false">
             <div class="hero-slide-bg">
                 <img src="assets/images/hero-storage-facility.jpg" alt="Large-scale records storage warehouse">
             </div>
             <div class="hero-slide-overlay"></div>
-            <div class="hero-slide-content">
-                <div class="hero-badge"><i class="fas fa-building-shield"></i> Enterprise-Grade Security</div>
-                <h1>Protecting Your <span>Most Critical</span> Business Records</h1>
-                <p>State-of-the-art climate-controlled facilities with biometric access, fire suppression, and 24/7 monitoring to safeguard millions of documents.</p>
-                <div class="hero-actions">
-                    <a href="services.html" class="btn btn-primary btn-lg"><i class="fas fa-arrow-right"></i> Our Services</a>
-                    <a href="contact.html" class="btn btn-secondary btn-lg"><i class="fas fa-phone"></i> Contact Us</a>
+            <div class="hero2-grid-mesh"></div>
+            <div class="hero2-container">
+                <div class="hero2-split">
+                    <div class="hero2-left-col">
+                        <div class="hero2-pill-badge">
+                            <span class="hero2-pulse-dot"></span>
+                            <i class="fas fa-shield-halved"></i>
+                            <span>Enterprise-Grade Physical & Digital Vaults</span>
+                        </div>
+                        <h1 class="hero2-title">Protecting Your <span class="hero2-glow-text">Most Critical</span> Business Records</h1>
+                        <p class="hero2-description">Next-generation archival facilities featuring biometrics, climate stability (65°F / 40% RH), and sub-minute robotic retrievals across 15 national preservation hubs.</p>
+                        
+                        <div class="hero2-actions">
+                            <a href="services.html" class="btn btn-primary btn-lg hero2-btn-glow"><i class="fas fa-arrow-right"></i> Explore Services</a>
+                            <a href="contact.html" class="btn btn-secondary btn-lg hero2-btn-glass"><i class="fas fa-building-shield"></i> Book Vault Tour</a>
+                        </div>
+
+                        <div class="hero2-trust-strip">
+                            <div class="hero2-trust-item">
+                                <i class="fas fa-circle-check"></i>
+                                <span>15 Nationwide Vaults</span>
+                            </div>
+                            <div class="hero2-trust-item">
+                                <i class="fas fa-circle-check"></i>
+                                <span>99.999% Vault Uptime</span>
+                            </div>
+                            <div class="hero2-trust-item">
+                                <i class="fas fa-circle-check"></i>
+                                <span>SOC 2 & HIPAA Ready</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero2-right-col">
+                        <div class="hero2-console-card">
+                            <div class="hero2-console-header">
+                                <div class="console-title-group">
+                                    <div class="console-status-icon"><i class="fas fa-vault"></i></div>
+                                    <div>
+                                        <h4>Vault Sector 04</h4>
+                                        <small>High-Density Climate Bay A</small>
+                                    </div>
+                                </div>
+                                <span class="console-pill-live"><span class="badge-dot green"></span> 24/7 Grid Live</span>
+                            </div>
+
+                            <div class="hero2-telemetry-grid">
+                                <div class="telemetry-stat-card">
+                                    <div class="telemetry-label"><i class="fas fa-temperature-arrow-down"></i> Temperature</div>
+                                    <div class="telemetry-value">65.2°F</div>
+                                    <div class="telemetry-sub">Optimal • Regulated</div>
+                                    <div class="telemetry-bar"><div class="telemetry-progress" style="width: 72%;"></div></div>
+                                </div>
+                                <div class="telemetry-stat-card">
+                                    <div class="telemetry-label"><i class="fas fa-droplet"></i> Relative Humidity</div>
+                                    <div class="telemetry-value">40.1%</div>
+                                    <div class="telemetry-sub">Clean Air • Target 40%</div>
+                                    <div class="telemetry-bar"><div class="telemetry-progress" style="width: 65%;"></div></div>
+                                </div>
+                                <div class="telemetry-stat-card">
+                                    <div class="telemetry-label"><i class="fas fa-fire-extinguisher"></i> Suppression</div>
+                                    <div class="telemetry-value">FM-200</div>
+                                    <div class="telemetry-sub">Waterless Gas Standby</div>
+                                </div>
+                                <div class="telemetry-stat-card">
+                                    <div class="telemetry-label"><i class="fas fa-fingerprint"></i> Airlock</div>
+                                    <div class="telemetry-value">Secured</div>
+                                    <div class="telemetry-sub">Biometric Dual-Pass</div>
+                                </div>
+                            </div>
+
+                            <div class="hero2-console-log">
+                                <div class="log-indicator"><i class="fas fa-crosshairs"></i></div>
+                                <div class="log-text">
+                                    <strong>Real-Time Vault Telemetry Stream</strong>
+                                    <span>ASRS Automated Retrieval Crane 02 Online • Placement Verification 100%</span>
+                                </div>
+                            </div>
+
+                            <div class="hero2-floating-badge top-right">
+                                <i class="fas fa-shield-check"></i>
+                                <span>Zero Breach Custody</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Slide 2 -->
+        <!-- Slide 2: Rapid Retrieval & Chain of Custody -->
         <div class="hero-slide" aria-hidden="true">
             <div class="hero-slide-bg">
                 <img src="assets/images/retrieval-service.jpg" alt="Professional document retrieval service">
             </div>
             <div class="hero-slide-overlay"></div>
-            <div class="hero-slide-content">
-                <div class="hero-badge"><i class="fas fa-bolt"></i> Rapid Retrieval</div>
-                <h1>Get Any Document <span>Within Hours,</span> Not Days</h1>
-                <p>Our industry-leading retrieval system delivers your requested files with 99.9% accuracy. Same-day and emergency options available for urgent business needs.</p>
-                <div class="hero-actions">
-                    <a href="pricing.html" class="btn btn-primary btn-lg"><i class="fas fa-tag"></i> View Plans</a>
-                    <a href="login.html" class="btn btn-secondary btn-lg"><i class="fas fa-right-to-bracket"></i> Client Portal</a>
+            <div class="hero2-grid-mesh"></div>
+            <div class="hero2-container">
+                <div class="hero2-split">
+                    <div class="hero2-left-col">
+                        <div class="hero2-pill-badge">
+                            <span class="hero2-pulse-dot"></span>
+                            <i class="fas fa-bolt"></i>
+                            <span>Guaranteed 2-Hour Rapid Retrieval</span>
+                        </div>
+                        <h1 class="hero2-title">Get Any Record <span class="hero2-glow-text">Within Hours,</span> Not Days</h1>
+                        <p class="hero2-description">Our industry-leading retrieval dispatcher fulfills emergency and scheduled requests with 99.9% accuracy. Physical records delivered via dedicated couriers or scanned directly to our encrypted portal.</p>
+                        
+                        <div class="hero2-actions">
+                            <a href="pricing.html" class="btn btn-primary btn-lg hero2-btn-glow"><i class="fas fa-tag"></i> View Storage Plans</a>
+                            <a href="login.html" class="btn btn-secondary btn-lg hero2-btn-glass"><i class="fas fa-right-to-bracket"></i> Client Portal</a>
+                        </div>
+
+                        <div class="hero2-trust-strip">
+                            <div class="hero2-trust-item">
+                                <i class="fas fa-circle-check"></i>
+                                <span>Emergency 2-Hr Rush</span>
+                            </div>
+                            <div class="hero2-trust-item">
+                                <i class="fas fa-circle-check"></i>
+                                <span>100% Van GPS Tracking</span>
+                            </div>
+                            <div class="hero2-trust-item">
+                                <i class="fas fa-circle-check"></i>
+                                <span>Instant Scan-on-Demand</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero2-right-col">
+                        <div class="hero2-console-card">
+                            <div class="hero2-console-header">
+                                <div class="console-title-group">
+                                    <div class="console-status-icon"><i class="fas fa-truck-fast"></i></div>
+                                    <div>
+                                        <h4>Rapid Dispatch Hub</h4>
+                                        <small>Chain-of-Custody Active Order</small>
+                                    </div>
+                                </div>
+                                <span class="console-pill-live"><span class="badge-dot green"></span> Dispatch En Route</span>
+                            </div>
+
+                            <div class="hero2-pipeline-tracker">
+                                <div class="pipeline-step completed">
+                                    <div class="step-circle"><i class="fas fa-check"></i></div>
+                                    <span>Request</span>
+                                </div>
+                                <div class="pipeline-line active"></div>
+                                <div class="pipeline-step completed">
+                                    <div class="step-circle"><i class="fas fa-check"></i></div>
+                                    <span>Vault Pick</span>
+                                </div>
+                                <div class="pipeline-line active"></div>
+                                <div class="pipeline-step active">
+                                    <div class="step-circle"><i class="fas fa-truck"></i></div>
+                                    <span>Courier GPS</span>
+                                </div>
+                                <div class="pipeline-line"></div>
+                                <div class="pipeline-step">
+                                    <div class="step-circle"><i class="fas fa-signature"></i></div>
+                                    <span>Handover</span>
+                                </div>
+                            </div>
+
+                            <div class="hero2-telemetry-grid">
+                                <div class="telemetry-stat-card">
+                                    <div class="telemetry-label"><i class="fas fa-stopwatch"></i> Avg Rush Time</div>
+                                    <div class="telemetry-value">84 Mins</div>
+                                    <div class="telemetry-sub">Well Under 2h SLA</div>
+                                </div>
+                                <div class="telemetry-stat-card">
+                                    <div class="telemetry-label"><i class="fas fa-bullseye"></i> Accuracy</div>
+                                    <div class="telemetry-value">99.9%</div>
+                                    <div class="telemetry-sub">Barcode Verified</div>
+                                </div>
+                            </div>
+
+                            <div class="hero2-console-log">
+                                <div class="log-indicator"><i class="fas fa-location-arrow"></i></div>
+                                <div class="log-text">
+                                    <strong>Courier Van #B14 Telemetry</strong>
+                                    <span>En Route to Financial District • Tamper Seal #9941A Secured</span>
+                                </div>
+                            </div>
+
+                            <div class="hero2-floating-badge top-right">
+                                <i class="fas fa-file-signature"></i>
+                                <span>Digital Sign-Off</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Slide 3 -->
+        <!-- Slide 3: AI Digitization & Cloud OCR -->
         <div class="hero-slide" aria-hidden="true">
             <div class="hero-slide-bg">
                 <img src="assets/images/digitization-service.jpg" alt="Document digitization and scanning bureau">
             </div>
             <div class="hero-slide-overlay"></div>
-            <div class="hero-slide-content">
-                <div class="hero-badge"><i class="fas fa-microchip"></i> Digital Transformation</div>
-                <h1>Turn Paper Archives into <span>Searchable</span> Digital Assets</h1>
-                <p>High-speed scanning with full OCR, custom indexing, and seamless integration into your existing document management ecosystem.</p>
-                <div class="hero-actions">
-                    <a href="services.html" class="btn btn-primary btn-lg"><i class="fas fa-file-import"></i> Digitization Services</a>
-                    <a href="about.html" class="btn btn-secondary btn-lg"><i class="fas fa-building"></i> About Us</a>
+            <div class="hero2-grid-mesh"></div>
+            <div class="hero2-container">
+                <div class="hero2-split">
+                    <div class="hero2-left-col">
+                        <div class="hero2-pill-badge">
+                            <span class="hero2-pulse-dot"></span>
+                            <i class="fas fa-qrcode"></i>
+                            <span>AI-Powered Optical Scanning Bureau</span>
+                        </div>
+                        <h1 class="hero2-title">Turn Paper Archives into <span class="hero2-glow-text">Searchable</span> Intelligence</h1>
+                        <p class="hero2-description">High-speed production scanning up to 250 pages per minute with neural OCR, automatic classification, and direct integration with Microsoft SharePoint, OneDrive, and enterprise cloud archives.</p>
+                        
+                        <div class="hero2-actions">
+                            <a href="services.html" class="btn btn-primary btn-lg hero2-btn-glow"><i class="fas fa-file-import"></i> Digitization Services</a>
+                            <a href="about.html" class="btn btn-secondary btn-lg hero2-btn-glass"><i class="fas fa-building"></i> Learn About ArchiVault</a>
+                        </div>
+
+                        <div class="hero2-trust-strip">
+                            <div class="hero2-trust-item">
+                                <i class="fas fa-circle-check"></i>
+                                <span>250 PPM Speed</span>
+                            </div>
+                            <div class="hero2-trust-item">
+                                <i class="fas fa-circle-check"></i>
+                                <span>99.5% OCR Accuracy</span>
+                            </div>
+                            <div class="hero2-trust-item">
+                                <i class="fas fa-circle-check"></i>
+                                <span>Searchable PDF/A</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero2-right-col">
+                        <div class="hero2-console-card">
+                            <div class="hero2-console-header">
+                                <div class="console-title-group">
+                                    <div class="console-status-icon"><i class="fas fa-microchip"></i></div>
+                                    <div>
+                                        <h4>OCR & Digitization Bureau</h4>
+                                        <small>Production Scanner Array 03</small>
+                                    </div>
+                                </div>
+                                <span class="console-pill-live"><span class="badge-dot blue"></span> 250 PPM Active</span>
+                            </div>
+
+                            <div class="hero2-ocr-preview-box">
+                                <div class="ocr-preview-header">
+                                    <span class="ocr-tag"><i class="fas fa-file-lines"></i> ARCHIVE_BATCH_8041.pdf</span>
+                                    <span class="ocr-badge-done">OCR PASSED</span>
+                                </div>
+                                <div class="ocr-tags-row">
+                                    <span class="ocr-chip"><i class="fas fa-tag"></i> Legal Retention: 7 Yrs</span>
+                                    <span class="ocr-chip"><i class="fas fa-barcode"></i> Barcode: #BX-4890</span>
+                                    <span class="ocr-chip"><i class="fas fa-lock"></i> AES-256</span>
+                                </div>
+                            </div>
+
+                            <div class="hero2-telemetry-grid">
+                                <div class="telemetry-stat-card">
+                                    <div class="telemetry-label"><i class="fas fa-gauge-high"></i> Scan Speed</div>
+                                    <div class="telemetry-value">250 PPM</div>
+                                    <div class="telemetry-sub">Ultra-High Speed</div>
+                                </div>
+                                <div class="telemetry-stat-card">
+                                    <div class="telemetry-label"><i class="fas fa-wand-magic-sparkles"></i> OCR Engine</div>
+                                    <div class="telemetry-value">99.5%</div>
+                                    <div class="telemetry-sub">Multi-Language AI</div>
+                                </div>
+                            </div>
+
+                            <div class="hero2-console-log">
+                                <div class="log-indicator"><i class="fas fa-cloud-arrow-up"></i></div>
+                                <div class="log-text">
+                                    <strong>Cloud Ingestion Complete</strong>
+                                    <span>Full-Text Search Indexed • Synced to Client Portal</span>
+                                </div>
+                            </div>
+
+                            <div class="hero2-floating-badge top-right">
+                                <i class="fas fa-sparkles"></i>
+                                <span>AI Classification</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Slider Controls -->
+        <!-- Redesigned Segmented Slider Controls -->
         <div class="hero-slider-controls">
             <button class="hero-nav-btn" id="heroPrevBtn" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
             <div class="hero-dots">
-                <button class="hero-dot active" aria-label="Slide 1"><div class="hero-dot-fill"></div></button>
-                <button class="hero-dot" aria-label="Slide 2"><div class="hero-dot-fill"></div></button>
-                <button class="hero-dot" aria-label="Slide 3"><div class="hero-dot-fill"></div></button>
+                <button class="hero-dot active" aria-label="Slide 1">
+                    <span class="hero-dot-label">01 Vault Security</span>
+                    <div class="hero-dot-track"><div class="hero-dot-fill"></div></div>
+                </button>
+                <button class="hero-dot" aria-label="Slide 2">
+                    <span class="hero-dot-label">02 Rapid Retrieval</span>
+                    <div class="hero-dot-track"><div class="hero-dot-fill"></div></div>
+                </button>
+                <button class="hero-dot" aria-label="Slide 3">
+                    <span class="hero-dot-label">03 AI Digitization</span>
+                    <div class="hero-dot-track"><div class="hero-dot-fill"></div></div>
+                </button>
             </div>
             <button class="hero-nav-btn" id="heroNextBtn" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item fade-up">
+                    <div class="stat-number" data-count="15">0</div>
+                    <div class="stat-label">Secure Facilities</div>
+                </div>
+                <div class="stat-item fade-up">
+                    <div class="stat-number" data-count="50" data-suffix="M+">0</div>
+                    <div class="stat-label">Documents Digitized</div>
+                </div>
+                <div class="stat-item fade-up">
+                    <div class="stat-number" data-count="2" data-suffix="hr">0</div>
+                    <div class="stat-label">Emergency Retrieval</div>
+                </div>
+                <div class="stat-item fade-up">
+                    <div class="stat-number" data-count="100" data-suffix="%">0</div>
+                    <div class="stat-label">Compliance Guarantee</div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -116,78 +393,150 @@
         </div>
     </section>
 
-    <!-- Split Feature: Retrieval -->
-    <section class="section section-alt">
+    <!-- 1. Dual-Channel Retrieval Matrix (Interactive Dispatch Console) -->
+    <section class="section design-retrieval-matrix" id="retrieval-dispatch">
         <div class="container">
-            <div class="split-section reverse">
-                <div class="split-content slide-left">
-                    <div class="section-badge"><i class="fas fa-clock-rotate-left"></i> Rapid Access</div>
-                    <h2>Retrieve Any Record, <span style="color:var(--secondary);">Anytime, Anywhere</span></h2>
-                    <p>Our proprietary tracking system ensures every box and file is indexed, barcoded, and instantly locatable. Request retrievals through our secure client portal and receive physical or digital copies — fast.</p>
-                    <div class="feature-checklist">
-                        <div class="feature-check"><i class="fas fa-check-circle"></i> Same-day delivery for urgent requests</div>
-                        <div class="feature-check"><i class="fas fa-check-circle"></i> Emergency 2-hour retrieval available</div>
-                        <div class="feature-check"><i class="fas fa-check-circle"></i> Secure courier with chain-of-custody</div>
-                        <div class="feature-check"><i class="fas fa-check-circle"></i> Digital scan-on-demand option</div>
+            <div class="text-center" style="max-width: 780px; margin: 0 auto 48px;">
+                <div class="section-badge fade-up"><i class="fas fa-bolt"></i> Rapid SLA Dispatch</div>
+                <h2 class="section-title fade-up">Retrieve Any Record, <span style="color:var(--secondary);">Anytime, Anywhere</span></h2>
+                <p class="section-desc fade-up">Our intelligent archival index ensures every file is barcoded and instantly locatable. Request urgent physical courier delivery or sub-hour scan-on-demand directly from your secure portal.</p>
+            </div>
+
+            <div class="retrieval-matrix-grid">
+                <!-- Left: Interactive Dispatch Terminal Card -->
+                <div class="retrieval-terminal-card slide-left">
+                    <div class="retrieval-terminal-screen">
+                        <img src="assets/images/retrieval-service.jpg" alt="ArchiVault records technician scanning and preparing priority document retrieval dispatch" loading="lazy">
+                        <div class="retrieval-screen-overlay"></div>
+                        <div class="retrieval-scan-line"></div>
+                        <div class="retrieval-status-pill">
+                            <span class="badge-dot green"></span> ACTIVE RETRIEVAL QUEUE • 99.98% ON-TIME
+                        </div>
+                        <div class="retrieval-sla-dock">
+                            <span><i class="fas fa-satellite-dish"></i> GPS Fleet Telematics Live</span>
+                            <span>DISPATCH HUB: VAULT-02</span>
+                        </div>
                     </div>
-                    <a href="login.html" class="btn btn-primary"><i class="fas fa-right-to-bracket"></i> Access Client Portal</a>
+                    <div class="retrieval-terminal-info">
+                        <div class="retrieval-dock-stats">
+                            <div class="retrieval-stat-box">
+                                <strong>&lt; 2 Hours</strong>
+                                <span>Emergency SLA</span>
+                            </div>
+                            <div class="retrieval-stat-box">
+                                <strong>30 Mins</strong>
+                                <span>Scan-on-Demand</span>
+                            </div>
+                            <div class="retrieval-stat-box">
+                                <strong>100%</strong>
+                                <span>Chain-of-Custody</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="split-image slide-right">
-                    <img src="assets/images/retrieval-service.jpg" alt="Document retrieval and delivery service">
+
+                <!-- Right: Dual-Channel Delivery Capabilities -->
+                <div class="retrieval-channels-wrap slide-right">
+                    <!-- Channel 1: Physical Courier -->
+                    <div class="retrieval-channel-card">
+                        <div class="retrieval-channel-head">
+                            <span class="retrieval-channel-badge courier"><i class="fas fa-truck-fast"></i> Physical Delivery</span>
+                            <span style="font-size:0.76rem; font-weight:700; color:var(--secondary);">Same-Day & 2-Hour</span>
+                        </div>
+                        <h3 class="retrieval-channel-title"><i class="fas fa-box-archive" style="color:var(--secondary);"></i> Armored Courier Handover</h3>
+                        <p>Hardcopy files delivered to your desk in serialized, tamper-evident locked Pelican storm cases with digital signatures recorded upon handover.</p>
+                        <div class="retrieval-channel-chips">
+                            <span class="retrieval-mini-chip"><i class="fas fa-check"></i> GPS fleet monitoring</span>
+                            <span class="retrieval-mini-chip"><i class="fas fa-check"></i> TSA-cleared couriers</span>
+                        </div>
+                    </div>
+
+                    <!-- Channel 2: Scan-on-Demand -->
+                    <div class="retrieval-channel-card">
+                        <div class="retrieval-channel-head">
+                            <span class="retrieval-channel-badge digital"><i class="fas fa-file-pdf"></i> Digital Delivery</span>
+                            <span style="font-size:0.76rem; font-weight:700; color:var(--secondary);">Sub-30 Minute Upload</span>
+                        </div>
+                        <h3 class="retrieval-channel-title"><i class="fas fa-cloud-arrow-down" style="color:var(--secondary);"></i> Scan-on-Demand Portal</h3>
+                        <p>Need documents immediately? We pull the file from high-density shelving, scan it in 600 DPI searchable OCR PDF, and securely push it to your encrypted client portal.</p>
+                        <div class="retrieval-channel-chips">
+                            <span class="retrieval-mini-chip"><i class="fas fa-check"></i> 256-bit AES encryption</span>
+                            <span class="retrieval-mini-chip"><i class="fas fa-check"></i> Automated OCR text search</span>
+                        </div>
+                    </div>
+
+                    <a href="login.html" class="btn btn-primary btn-lg" style="align-self:flex-start;"><i class="fas fa-right-to-bracket"></i> Launch Retrieval Portal</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Stats -->
-    <section class="stats-bar">
+
+    <!-- 2. Dual-Wing Compliance Fortress (Bifurcated Healthcare & Legal Wings) -->
+    <section class="section design-vault-wings" id="healthcare-legal-vaults">
         <div class="container">
-            <div class="stats-grid">
-                <div class="stat-item fade-up">
-                    <div class="stat-number" data-count="15">0</div>
-                    <div class="stat-label">Secure Facilities</div>
+            <div class="vault-wings-header">
+                <div class="section-badge fade-up"><i class="fas fa-shield-halved"></i> Specialized Regulatory Vaults</div>
+                <h2 class="section-title fade-up">Dedicated Vaults for <span style="color:var(--secondary);">Healthcare & Legal</span> Archives</h2>
+                <p class="section-desc fade-up">Engineered to exceed the most stringent regulatory mandates. Biometric mantraps, blast-rated vault doors, and continuous digital chain-of-custody for life-sciences and jurisprudence.</p>
+            </div>
+
+            <!-- Centerpiece Visual Pod -->
+            <div class="vault-wings-centerpiece fade-up">
+                <img src="assets/images/medical-legal-vault.jpg" alt="High security biometric medical and legal records vault with security mantrap and specialized archival shelving" class="vault-wings-img" loading="lazy">
+                <div class="vault-wings-overlay"></div>
+                <div class="vault-wings-badge-top">
+                    <span class="badge-dot green"></span> HIPAA & GLBA CERTIFIED SUBTERRANEAN WING 3
                 </div>
-                <div class="stat-item fade-up">
-                    <div class="stat-number" data-count="50" data-suffix="M+">0</div>
-                    <div class="stat-label">Documents Digitized</div>
-                </div>
-                <div class="stat-item fade-up">
-                    <div class="stat-number" data-count="2" data-suffix="hr">0</div>
-                    <div class="stat-label">Emergency Retrieval</div>
-                </div>
-                <div class="stat-item fade-up">
-                    <div class="stat-number" data-count="100" data-suffix="%">0</div>
-                    <div class="stat-label">Compliance Guarantee</div>
+                <div class="vault-wings-dock-bottom">
+                    <span><i class="fas fa-fingerprint"></i> Dual-Custodian Biometric Mantrap Active</span>
+                    <span>RESTRICTED PERSONNEL ONLY • ZERO SINGLE-OPERATOR ACCESS</span>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Services Showcase -->
-    <section class="section">
-        <div class="container text-center">
-            <div class="section-badge fade-up"><i class="fas fa-layer-group"></i> Premium Solutions</div>
-            <h2 class="section-title fade-up">Full-Spectrum Records Services</h2>
-            <p class="section-desc fade-up">From initial pickup to secure destruction, we manage the complete lifecycle of your business records with precision and care.</p>
-            <div class="services-feature-grid">
-                <div class="service-feature-card fade-up">
-                    <div class="service-feature-img">
-                        <img src="assets/images/hero-storage-facility.jpg" alt="Climate-controlled storage vault">
+            <!-- 2 Specialized Wings Grid -->
+            <div class="vault-wings-columns">
+                <!-- Wing 1: Healthcare & Medical Wing -->
+                <div class="vault-wing-card fade-up">
+                    <div class="vault-wing-head">
+                        <div class="vault-wing-icon health"><i class="fas fa-heart-pulse"></i></div>
+                        <div class="vault-wing-title-wrap">
+                            <h3>Healthcare Archival Wing</h3>
+                            <span class="vault-wing-pill">HIPAA & HITECH COMPLIANT</span>
+                        </div>
                     </div>
-                    <div class="service-feature-body">
-                        <h3>Enterprise Vault Storage</h3>
-                        <p>Multi-tiered climate-controlled vaults with redundant power systems. Certified for financial records, medical files, and legal documents.</p>
-                    </div>
-                </div>
-                <div class="service-feature-card fade-up">
-                    <div class="service-feature-img">
-                        <img src="assets/images/digitization-service.jpg" alt="High-speed document scanning">
-                    </div>
-                    <div class="service-feature-body">
-                        <h3>Intelligent Digitization</h3>
-                        <p>AI-powered document classification and OCR scanning that transforms your paper archives into structured, searchable digital assets.</p>
+                    <p>Protected retention for patient medical charts, clinical trial records, radiology films, and pathology specimens with complete statutory retention tracking.</p>
+                    <div class="vault-wing-points">
+                        <div class="vault-wing-point"><i class="fas fa-check-circle"></i> Dual-custody authorization for PHI access</div>
+                        <div class="vault-wing-point"><i class="fas fa-check-circle"></i> 7-10 year statutory retention automation</div>
+                        <div class="vault-wing-point"><i class="fas fa-check-circle"></i> Waterless clean-agent fire suppression</div>
                     </div>
                 </div>
+
+                <!-- Wing 2: Legal Litigation & Discovery Wing -->
+                <div class="vault-wing-card fade-up">
+                    <div class="vault-wing-head">
+                        <div class="vault-wing-icon legal"><i class="fas fa-scale-balanced"></i></div>
+                        <div class="vault-wing-title-wrap">
+                            <h3>Legal & Litigation Hold Wing</h3>
+                            <span class="vault-wing-pill">ABA & SOX AUDIT READY</span>
+                        </div>
+                    </div>
+                    <p>Subterranean evidence storage and active discovery archives with court-admissible custody trails and instant litigation freeze capabilities.</p>
+                    <div class="vault-wing-points">
+                        <div class="vault-wing-point"><i class="fas fa-check-circle"></i> Instant legal hold quarantine lockouts</div>
+                        <div class="vault-wing-point"><i class="fas fa-check-circle"></i> Tamper-evident serialized wax seal cages</div>
+                        <div class="vault-wing-point"><i class="fas fa-check-circle"></i> Cryptographic client portal access audits</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Compliance Ribbon -->
+            <div class="vault-wings-ribbon fade-up">
+                <div class="vault-ribbon-item"><i class="fas fa-certificate"></i> HIPAA Covered Entity</div>
+                <div class="vault-ribbon-item"><i class="fas fa-stamp"></i> SOC 2 Type II Certified</div>
+                <div class="vault-ribbon-item"><i class="fas fa-gavel"></i> Federal Rule 37 Compliant</div>
+                <div class="vault-ribbon-item"><i class="fas fa-vault"></i> Class 350 4-Hr Fire Barrier</div>
             </div>
         </div>
     </section>
@@ -205,7 +554,9 @@
                     </div>
                     <p class="testimonial-text">"Moving our 100,000+ files to ArchiVault freed up an entire floor of our office building. The ROI was immediate and significant."</p>
                     <div class="testimonial-author">
-                        <div class="testimonial-avatar">DW</div>
+                        <div class="testimonial-avatar">
+                            <img src="assets/images/avatar-diana-washington.jpg" alt="Diana Washington" loading="lazy">
+                        </div>
                         <div class="testimonial-info">
                             <strong>Diana Washington</strong>
                             <span>COO, National Insurance Group</span>
@@ -218,7 +569,9 @@
                     </div>
                     <p class="testimonial-text">"The client portal is fantastic. Our legal team can request and receive digital copies of stored contracts within minutes."</p>
                     <div class="testimonial-author">
-                        <div class="testimonial-avatar">RH</div>
+                        <div class="testimonial-avatar">
+                            <img src="assets/images/avatar-robert-henderson.jpg" alt="Robert Henderson" loading="lazy">
+                        </div>
                         <div class="testimonial-info">
                             <strong>Robert Henderson</strong>
                             <span>General Counsel, Apex Law Partners</span>
@@ -231,7 +584,9 @@
                     </div>
                     <p class="testimonial-text">"Their compliance management tools saved us during our last government audit. Every document was accounted for and easily accessible."</p>
                     <div class="testimonial-author">
-                        <div class="testimonial-avatar">LC</div>
+                        <div class="testimonial-avatar">
+                            <img src="assets/images/avatar-linda-chen.jpg" alt="Linda Chen" loading="lazy">
+                        </div>
                         <div class="testimonial-info">
                             <strong>Linda Chen</strong>
                             <span>Records Manager, City of Portland</span>
@@ -242,14 +597,111 @@
         </div>
     </section>
 
-    <!-- CTA -->
-    <section class="cta-section">
+    <!-- 3. Clean-Room Environmental Capsule (Media & Tape Vaulting) -->
+    <section class="section design-media-capsule" id="media-tape-vault">
         <div class="container">
-            <h2 class="fade-up">Start Your Free Records Assessment</h2>
-            <p class="fade-up">Let our experts analyze your current records program and recommend the most efficient, cost-effective storage solution for your organization.</p>
-            <div class="cta-actions fade-up">
-                <a href="contact.html" class="btn btn-primary btn-lg"><i class="fas fa-calendar-check"></i> Book Free Assessment</a>
-                <a href="pricing.html" class="btn btn-secondary btn-lg"><i class="fas fa-tag"></i> Compare Plans</a>
+            <div class="media-capsule-header">
+                <div class="section-badge fade-up"><i class="fas fa-hard-drive"></i> Disaster Recovery & Server Survivability</div>
+                <h2 class="section-title fade-up">Climate-Controlled <span style="color:var(--secondary);">Tape & Media</span> Vaulting</h2>
+                <p class="section-desc fade-up">Clean-room subterranean vaults purpose-built for LTO cartridges, server backups, and optical media. Shielded against electromagnetic pulses and strictly held at 65°F and 40% RH.</p>
+            </div>
+
+            <!-- Capsule Layout: Image Telemetry Screen on Left, 3 Precision Modules on Right -->
+            <div class="media-capsule-layout">
+                <!-- Left: Media Chamber with Live Environmental Telemetry HUD -->
+                <div class="media-capsule-screen slide-left">
+                    <img src="assets/images/magnetic-tape-vault.jpg" alt="Specialized magnetic media and tape backup storage vault with custom anti-static shelving and climate control" class="media-capsule-img" loading="lazy">
+                    <div class="media-capsule-overlay"></div>
+                    <div class="media-capsule-tag-top">
+                        <span class="badge-dot green"></span> CLASS 10,000 CLEAN-ROOM • FARADAY SHIELDED
+                    </div>
+                    <div class="media-capsule-telemetry-hud">
+                        <div class="telemetry-hud-item">
+                            <strong>18.2°C (64.8°F)</strong>
+                            <span>Core Temperature</span>
+                        </div>
+                        <div class="telemetry-hud-item">
+                            <strong>40.2% RH</strong>
+                            <span>Relative Humidity</span>
+                        </div>
+                        <div class="telemetry-hud-item">
+                            <strong>&lt; 2 Hours</strong>
+                            <span>Hot-Site SLA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: 3 Disaster Recovery Modules -->
+                <div class="media-capsule-modules slide-right">
+                    <!-- Module 1: Scheduled Rotation -->
+                    <div class="media-module-card">
+                        <div class="media-module-head">
+                            <h3 class="media-module-title"><i class="fas fa-rotate" style="color:var(--secondary);"></i> Scheduled Media Rotation</h3>
+                            <span class="media-module-pill">Daily • Weekly • Monthly</span>
+                        </div>
+                        <p>Dedicated background-checked couriers swap LTO media at your data center on custom schedules using crush-proof, fire-rated Pelican Storm cases.</p>
+                    </div>
+
+                    <!-- Module 2: Emergency DR Dispatch -->
+                    <div class="media-module-card">
+                        <div class="media-module-head">
+                            <h3 class="media-module-title"><i class="fas fa-truck-fast" style="color:var(--secondary);"></i> Rapid Disaster Recovery SLA</h3>
+                            <span class="media-module-pill">24/7/365 On-Call</span>
+                        </div>
+                        <p>In the event of an unplanned data center outage or ransomware lockdown, our emergency team delivers golden tape images directly to your designated hot site.</p>
+                    </div>
+
+                    <!-- Module 3: Anti-Static Storage -->
+                    <div class="media-module-card">
+                        <div class="media-module-head">
+                            <h3 class="media-module-title"><i class="fas fa-magnet" style="color:var(--secondary);"></i> EMP & Static Elimination</h3>
+                            <span class="media-module-pill">Zero Data Decay</span>
+                        </div>
+                        <p>Grounded anti-static racking, positive-pressure air filtration, and dry gaseous clean-agent suppression protect against magnetic corruption.</p>
+                    </div>
+
+                    <a href="services.html" class="btn btn-primary btn-lg" style="align-self:flex-start; margin-top: 6px;"><i class="fas fa-server"></i> Explore Media Vaulting Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA: Split 2-Column Action Showcase -->
+    <section class="cta-split-section">
+        <div class="container">
+            <div class="cta-split-card fade-up">
+                <div class="cta-split-left">
+                    <div class="cta-pill"><i class="fas fa-bolt"></i> Fast Onboarding</div>
+                    <h2>Start Your Free Records Assessment</h2>
+                    <p>Let our certified archivists audit your records volume and deliver a tailored, cost-effective storage blueprint in under 48 hours.</p>
+                    <div class="cta-actions">
+                        <a href="contact.html" class="btn btn-primary btn-lg"><i class="fas fa-calendar-check"></i> Book Free Assessment</a>
+                        <a href="pricing.html" class="btn btn-secondary btn-lg"><i class="fas fa-tag"></i> Compare Plans</a>
+                    </div>
+                </div>
+                <div class="cta-split-right">
+                    <div class="cta-metric-tile">
+                        <div class="cta-tile-icon"><i class="fas fa-clock"></i></div>
+                        <div class="cta-tile-info">
+                            <strong>48-Hour Turnaround</strong>
+                            <small>Comprehensive audit completed fast</small>
+                        </div>
+                    </div>
+                    <div class="cta-metric-tile">
+                        <div class="cta-tile-icon"><i class="fas fa-arrow-trend-down"></i></div>
+                        <div class="cta-tile-info">
+                            <strong>Average 35% Savings</strong>
+                            <small>Lower storage & indexing overhead</small>
+                        </div>
+                    </div>
+                    <div class="cta-metric-tile">
+                        <div class="cta-tile-icon"><i class="fas fa-shield-halved"></i></div>
+                        <div class="cta-tile-info">
+                            <strong>100% Chain-of-Custody</strong>
+                            <small>Tracked from collection to vault</small>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -257,6 +709,6 @@
 
 <div id="footer-placeholder"></div>
 
-<script src="components.js"></script>
+<script src="components.js?v=5.6"></script>
 </body>
 </html>
