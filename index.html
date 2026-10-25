@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=7.4">
+    <link rel="stylesheet" href="style.css?v=12.2">
     <script>
         (function(){try{if(localStorage.getItem('av-dark')==='1'){document.documentElement.classList.add('dark')}if(localStorage.getItem('av-rtl')==='1'){document.documentElement.setAttribute('dir','rtl')}}catch(e){}})();
     </script>
@@ -20,55 +20,168 @@
 <div id="navbar-placeholder"></div>
 
 <main>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-bg">
-            <img src="assets/images/hero-storage-facility.jpg" alt="Modern records storage warehouse facility">
+    <!-- Hero Slider (3 Slides with 5s Automated Interval) -->
+    <section class="hero hero-slider" id="heroSlider">
+        <!-- Slide 1: Physical Records Management & Climate Vaults -->
+        <div class="hero-slide active" aria-hidden="false">
+            <div class="hero-slide-bg">
+                <img src="assets/images/hero-storage-facility.jpg" alt="Modern records storage warehouse facility">
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge"><i class="fas fa-shield-halved"></i> Trusted by 2,000+ Enterprises</div>
+                    <h1>Secure Records <span>Management</span> You Can Count On</h1>
+                    <p class="hero-desc">From physical document storage to digital transformation — we safeguard your critical business records with climate-controlled facilities, real-time tracking, and rapid retrieval services.</p>
+                    <div class="hero-actions">
+                        <a href="services.html" class="btn btn-primary btn-lg"><i class="fas fa-arrow-right"></i> Explore Services</a>
+                        <a href="contact.html" class="btn btn-secondary btn-lg"><i class="fas fa-phone"></i> Get a Quote</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div>
+                            <div class="hero-stat-value" data-count="5" data-suffix="M+">5M+</div>
+                            <div class="hero-stat-label">Boxes Stored</div>
+                        </div>
+                        <div>
+                            <div class="hero-stat-value" data-count="99" data-suffix=".9%">99.9%</div>
+                            <div class="hero-stat-label">Retrieval Accuracy</div>
+                        </div>
+                        <div>
+                            <div class="hero-stat-value" data-count="24" data-suffix="/7">24/7</div>
+                            <div class="hero-stat-label">Security Monitoring</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-media">
+                    <div class="hero-media-card">
+                        <img src="assets/images/retrieval-service.jpg" alt="Document retrieval specialist organizing records">
+                    </div>
+                    <div class="hero-float-card top">
+                        <div class="hero-float-icon"><i class="fas fa-shield-halved"></i></div>
+                        <div class="hero-float-text">
+                            <strong>256-bit Encryption</strong>
+                            <small>Digital records secured</small>
+                        </div>
+                    </div>
+                    <div class="hero-float-card bottom">
+                        <div class="hero-float-icon"><i class="fas fa-truck-fast"></i></div>
+                        <div class="hero-float-text">
+                            <strong>Same-Day Retrieval</strong>
+                            <small>Urgent requests fulfilled</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <div class="hero-text">
-                <div class="hero-badge"><i class="fas fa-shield-halved"></i> Trusted by 2,000+ Enterprises</div>
-                <h1>Secure Records <span>Management</span> You Can Count On</h1>
-                <p class="hero-desc">From physical document storage to digital transformation — we safeguard your critical business records with climate-controlled facilities, real-time tracking, and rapid retrieval services.</p>
-                <div class="hero-actions">
-                    <a href="services.html" class="btn btn-primary btn-lg"><i class="fas fa-arrow-right"></i> Explore Services</a>
-                    <a href="contact.html" class="btn btn-secondary btn-lg"><i class="fas fa-phone"></i> Get a Quote</a>
+
+        <!-- Slide 2: High-Speed Scanning & AI OCR Archiving -->
+        <div class="hero-slide" aria-hidden="true">
+            <div class="hero-slide-bg">
+                <img src="assets/images/blueprint-scanning-studio.jpg" alt="High speed blueprint and document digitization studio">
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge"><i class="fas fa-bolt"></i> High-Speed OCR Digitization</div>
+                    <h1>Smart Scanning & <span>Instant Digital</span> Retrieval</h1>
+                    <p class="hero-desc">Transform legacy paper archives into searchable, AI-indexed digital assets. Access mission-critical files in seconds with multi-tier access control and 99.8% OCR text accuracy.</p>
+                    <div class="hero-actions">
+                        <a href="services.html" class="btn btn-primary btn-lg"><i class="fas fa-file-invoice"></i> Digitization Services</a>
+                        <a href="dashboard.html" class="btn btn-secondary btn-lg"><i class="fas fa-laptop-code"></i> Client Portal Demo</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div>
+                            <div class="hero-stat-value" data-count="12" data-suffix="M+">12M+</div>
+                            <div class="hero-stat-label">Pages Digitized</div>
+                        </div>
+                        <div>
+                            <div class="hero-stat-value" data-count="2" data-prefix="< " data-suffix=" hr">< 2 hr</div>
+                            <div class="hero-stat-label">Digital Turnaround</div>
+                        </div>
+                        <div>
+                            <div class="hero-stat-value" data-count="99" data-suffix=".8%">99.8%</div>
+                            <div class="hero-stat-label">OCR Accuracy</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="hero-stats">
-                    <div>
-                        <div class="hero-stat-value" data-count="5" data-suffix="M+">0</div>
-                        <div class="hero-stat-label">Boxes Stored</div>
+                <div class="hero-media">
+                    <div class="hero-media-card">
+                        <img src="assets/images/ai-ocr-pipeline-engineers.jpg" alt="AI OCR scanning engineers processing archival records">
                     </div>
-                    <div>
-                        <div class="hero-stat-value" data-count="99" data-suffix=".9%">0</div>
-                        <div class="hero-stat-label">Retrieval Accuracy</div>
+                    <div class="hero-float-card top">
+                        <div class="hero-float-icon"><i class="fas fa-microchip"></i></div>
+                        <div class="hero-float-text">
+                            <strong>AI Text Extraction</strong>
+                            <small>Searchable PDF & TIFF</small>
+                        </div>
                     </div>
-                    <div>
-                        <div class="hero-stat-value" data-count="24" data-suffix="/7">0</div>
-                        <div class="hero-stat-label">Security Monitoring</div>
+                    <div class="hero-float-card bottom">
+                        <div class="hero-float-icon"><i class="fas fa-cloud-arrow-up"></i></div>
+                        <div class="hero-float-text">
+                            <strong>Instant Cloud Access</strong>
+                            <small>Encrypted Client Portal</small>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="hero-media">
-                <div class="hero-media-card">
-                    <img src="assets/images/retrieval-service.jpg" alt="Document retrieval specialist organizing records">
-                </div>
-                <div class="hero-float-card top">
-                    <div class="hero-float-icon"><i class="fas fa-lock"></i></div>
-                    <div class="hero-float-text">
-                        <strong>256-bit Encryption</strong>
-                        <small>Digital records secured</small>
+        </div>
+
+        <!-- Slide 3: NAID AAA Certified Destruction & Chain-of-Custody -->
+        <div class="hero-slide" aria-hidden="true">
+            <div class="hero-slide-bg">
+                <img src="assets/images/fireproof-vault-chamber.jpg" alt="Fireproof high-density archival chamber">
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-badge"><i class="fas fa-certificate"></i> NAID AAA Certified Compliance</div>
+                    <h1>Certified Destruction & <span>Strict Chain of</span> Custody</h1>
+                    <p class="hero-desc">Ensure complete regulatory adherence for HIPAA, FACTA, and GDPR. We provide scheduled mobile shredding, serialized barcode seals, and verifiable certificates of destruction.</p>
+                    <div class="hero-actions">
+                        <a href="services.html" class="btn btn-primary btn-lg"><i class="fas fa-shield-halved"></i> Certified Shredding</a>
+                        <a href="pricing.html" class="btn btn-secondary btn-lg"><i class="fas fa-calculator"></i> View Pricing</a>
+                    </div>
+                    <div class="hero-stats">
+                        <div>
+                            <div class="hero-stat-value" data-count="100" data-suffix="%">100%</div>
+                            <div class="hero-stat-label">Chain-of-Custody</div>
+                        </div>
+                        <div>
+                            <div class="hero-stat-value" data-count="0" data-suffix=" Breaches">0 Breaches</div>
+                            <div class="hero-stat-label">Security Record</div>
+                        </div>
+                        <div>
+                            <div class="hero-stat-value" data-count="100" data-suffix="%">100%</div>
+                            <div class="hero-stat-label">Eco-Recycled</div>
+                        </div>
                     </div>
                 </div>
-                <div class="hero-float-card bottom">
-                    <div class="hero-float-icon"><i class="fas fa-truck-fast"></i></div>
-                    <div class="hero-float-text">
-                        <strong>Same-Day Retrieval</strong>
-                        <small>Urgent requests fulfilled</small>
+                <div class="hero-media">
+                    <div class="hero-media-card">
+                        <img src="assets/images/mobile-shredding-operation.jpg" alt="Mobile secure document shredding truck on site">
+                    </div>
+                    <div class="hero-float-card top">
+                        <div class="hero-float-icon"><i class="fas fa-stamp"></i></div>
+                        <div class="hero-float-text">
+                            <strong>NAID AAA Certified</strong>
+                            <small>100% Destruction Guarantee</small>
+                        </div>
+                    </div>
+                    <div class="hero-float-card bottom">
+                        <div class="hero-float-icon"><i class="fas fa-barcode"></i></div>
+                        <div class="hero-float-text">
+                            <strong>Serialized Seals</strong>
+                            <small>Tamper-Evident Tracking</small>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <!-- Hero Slider Controls -->
+        <div class="hero-slider-controls">
+            <button class="hero-nav-btn" id="heroPrevBtn" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+            <button class="hero-nav-btn" id="heroNextBtn" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
         </div>
     </section>
 
@@ -119,7 +232,7 @@
         <div class="container">
             <div class="panoramic-header-wrap">
                 <div class="section-badge fade-up"><i class="fas fa-fingerprint"></i> Biometric Perimeter Security</div>
-                <h2 class="section-title fade-up">Bank-Grade <span style="color:#C4B5FD;">Biometric Access</span> & Airlock Control</h2>
+                <h2 class="section-title fade-up">Bank-Grade <span class="biometric-highlight" style="color:var(--secondary);">Biometric Access</span> & Airlock Control</h2>
                 <p class="section-desc fade-up">Multi-factor dual-custodian authentication, subterranean biometric airlocks, and electronic time-locks guarding physical archives 24/7.</p>
             </div>
 
@@ -282,7 +395,7 @@
 
                 <!-- Center Panoramic Media -->
                 <div class="fortress-center-media fade-up">
-                    <img src="assets/images/fireproof-vault-chamber.jpg" alt="Certified fire safety engineer inspecting clean-agent Novec 1230 gas suppression cylinder system and blast vault doors" loading="lazy">
+                    <img src="assets/images/novec-suppression-system.jpg" alt="Certified fire safety engineer inspecting clean-agent Novec 1230 gas suppression cylinder system and blast vault doors" loading="lazy">
                     <div class="fortress-media-badge">
                         <span class="badge-dot green"></span> Novec 1230 Armed • Zero Water Risk
                     </div>
@@ -298,7 +411,7 @@
                     <div class="fortress-spec-box">
                         <div class="fortress-spec-metric"><i class="fas fa-crosshairs"></i> VESDA Laser</div>
                         <h4>Early Smoke Detection</h4>
-                        <p>Continuous laser air sampling detects microscopic pyrolysis before visible smoke appears.</p>
+                        <p>Continuous laser air sampling detects microscopic pyrolysis before visible smoke.</p>
                     </div>
                 </div>
             </div>
@@ -315,8 +428,8 @@
                 <!-- Left Specs & Format Controller -->
                 <div class="cad-content slide-left">
                     <div class="cad-badge"><i class="fas fa-compass-drafting"></i> Oversize Engineering Imaging</div>
-                    <h2 class="section-title" style="text-align:left; margin-bottom:16px;">Large-Format <span style="color:var(--secondary);">Blueprint & CAD</span> Digitization Bureau</h2>
-                    <p class="section-desc" style="text-align:left; margin-bottom:20px;">Standard scanners cannot handle municipal drawings, architectural schematics, or infrastructure maps. Our specialized studio digitizes continuous rolls up to 44 inches wide with 1200 DPI optical clarity.</p>
+                    <h2 class="section-title">Large-Format <span style="color:var(--secondary);">Blueprint & CAD</span> Digitization Bureau</h2>
+                    <p class="section-desc">Standard scanners cannot handle municipal drawings, architectural schematics, or infrastructure maps. Our specialized studio digitizes continuous rolls up to 44 inches wide with 1200 DPI optical clarity.</p>
                     
                     <!-- Resolution Chips -->
                     <div class="cad-resolutions-strip">
@@ -347,7 +460,7 @@
 
                 <!-- Right Scanner Screen with Live Laser Beam Animation -->
                 <div class="cad-scanner-screen slide-right">
-                    <img src="assets/images/blueprint-scanning-studio.jpg" alt="Specialist feeding wide 42-inch architectural blueprint into large-format roll scanner with CAD monitors" loading="lazy">
+                    <img src="assets/images/wide-format-blueprint-scanner.jpg" alt="Specialist feeding wide 42-inch architectural blueprint into large-format roll scanner with CAD monitors" loading="lazy">
                     <div class="cad-laser-line"></div>
                     <div class="cad-status-tag">
                         <span class="badge-dot blue"></span> 44" ULTRA-HD SCANNING ACTIVE
@@ -436,7 +549,7 @@
                         <div class="shred-metric-value">64 & 96 Gal</div>
                         <div class="shred-metric-label">Executive Tamper-Locked Consoles</div>
                     </div>
-                    <p class="shred-card-desc">Specialists wheel locked security consoles to the mobile shredding unit. An automated hydraulic arm lifts and dumps contents directly into the sealed hopper without manual touching.</p>
+                    <p class="shred-card-desc">Specialists wheel locked security consoles to the mobile shredding unit. An automated hydraulic arm lifts and dumps contents directly into the hopper without manual touching.</p>
                     <div class="shred-pills-list">
                         <div class="shred-pill"><i class="fas fa-check-circle"></i> Dual-custodian keyed padlocks</div>
                         <div class="shred-pill"><i class="fas fa-check-circle"></i> Integrated load-cell tare scale</div>
@@ -447,14 +560,14 @@
                 <!-- Card 2: Featured Visual Centerpiece with Generated Image -->
                 <div class="shred-card featured-card fade-up">
                     <div class="shred-visual-frame">
-                        <img src="assets/images/mobile-shredding-operation.jpg" alt="Enterprise document destruction security specialist operating high-tech mobile shredding truck on-site with visible cross-cut blades and diagnostic console" class="shred-visual-img" loading="lazy">
+                        <img src="assets/images/crosscut-shredder-mechanism.jpg" alt="High-torque cross-cut mobile shredder blades destroying confidential records into unrecoverable particles" class="shred-visual-img" loading="lazy">
                         <div class="shred-visual-overlay"></div>
                         <div class="shred-visual-badge-top">
                             <span class="badge-dot green"></span> ACTIVE • 3,800 LBS/HR
                         </div>
                         <div class="shred-visual-badge-bottom">
-                            <span><i class="fas fa-video"></i> Live CCTV Witness Feed</span>
-                            <span>NAID AAA #SH-409</span>
+                            <span><i class="fas fa-video"></i> Live CCTV Feed</span>
+                            <span>NAID AAA </span>
                         </div>
                     </div>
                     <div class="shred-card-head">
@@ -466,7 +579,7 @@
                         <div class="shred-metric-value">3,800 Lbs/Hr</div>
                         <div class="shred-metric-label">DIN 66399 Level P-5 Security Shred</div>
                     </div>
-                    <p class="shred-card-desc">Industrial rotary cutters pulverize thousands of pages into unrecoverable 30 mm² micro-particles. Client representatives can witness every batch in-person through armored glass or CCTV monitors.</p>
+                    <p class="shred-card-desc">Industrial rotary cutters pulverize thousands of pages into unrecoverable 30 mm² micro-particles. Client representatives can witness every batch in-person through armored glass.</p>
                     <div class="shred-pills-list">
                         <div class="shred-pill"><i class="fas fa-check-circle"></i> Solid carbide interlocking cutters</div>
                         <div class="shred-pill"><i class="fas fa-check-circle"></i> Hard drives & magnetic tapes accepted</div>
@@ -551,55 +664,217 @@
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section class="section section-alt">
-        <div class="container text-center">
-            <div class="section-badge fade-up"><i class="fas fa-quote-left"></i> Client Testimonials</div>
-            <h2 class="section-title fade-up">Trusted by Industry Leaders</h2>
-            <p class="section-desc fade-up">See what our clients have to say about our records management services and how we've helped transform their document workflows.</p>
-            <div class="testimonials-grid">
-                <div class="testimonial-card fade-up">
-                    <div class="testimonial-stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"ArchiVault transformed our records management. We went from a chaotic filing room to a fully indexed, retrievable archive in under two weeks."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">
-                            <img src="assets/images/avatar-michael-reynolds.jpg" alt="Michael Reynolds" loading="lazy">
+    <!-- Testimonials Redesign: Executive Case Study Spotlight & Story Rail -->
+    <section class="section section-alt testimonials-hub-section" id="testimonials">
+        <div class="container">
+            <div class="testimonials-hub-header text-center">
+                <div class="section-badge fade-up">
+                    <i class="fas fa-award"></i> Client Success Stories
+                </div>
+                <h2 class="section-title fade-up">Trusted by Industry Leaders</h2>
+                <p class="section-desc fade-up">
+                    Discover how top-tier organizations reduce storage overhead, accelerate digital discovery, and ensure 100% regulatory audit compliance.
+                </p>
+            </div>
+
+            <!-- Spotlight Hub Grid -->
+            <div class="t-hub-grid">
+                <!-- Left: Main Spotlight Stage -->
+                <div class="t-spotlight-stage">
+                    <div class="t-spotlight-carousel" id="tSpotlightCarousel">
+                        <!-- Panel 1: Meridian Holdings -->
+                        <div class="t-spotlight-panel active" data-story="0">
+                            <div class="t-panel-backdrop-glow"></div>
+                            
+                            <div class="t-panel-top">
+                                <div class="t-company-tag">
+                                    <div class="t-company-icon"><i class="fas fa-building-columns"></i></div>
+                                    <div>
+                                        <h3 class="t-company-name">Meridian Holdings</h3>
+                                        <span class="t-company-sector">Financial Services & Asset Management</span>
+                                    </div>
+                                </div>
+                                <div class="t-verified-audit-badge">
+                                    <div class="t-audit-stars">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    </div>
+                                    <span>5.0 • SEC Audit Verified</span>
+                                </div>
+                            </div>
+
+                            <div class="t-quote-wrapper">
+                                <div class="t-giant-quote-mark">“</div>
+                                <blockquote class="t-main-quote">
+                                    ArchiVault transformed our records management from a chaotic basement archive into an instant-search digital asset. When our SEC examination arrived, we retrieved multi-year tax ledgers in seconds with zero discrepancies.
+                                </blockquote>
+                            </div>
+
+                            <!-- Executive Profile Footer -->
+                            <div class="t-profile-footer">
+                                <div class="t-exec-avatar">
+                                    <img src="assets/images/avatar-michael-reynolds.jpg" alt="Michael Reynolds" loading="lazy">
+                                    <span class="t-exec-verified-check"><i class="fas fa-check"></i></span>
+                                </div>
+                                <div class="t-exec-details">
+                                    <strong class="t-exec-name">Michael Reynolds</strong>
+                                    <span class="t-exec-title">Chief Financial Officer</span>
+                                    <span class="t-exec-org">Meridian Holdings Inc.</span>
+                                </div>
+                                <div class="t-case-study-tag">
+                                    <i class="fas fa-file-contract"></i> Enterprise Retention Audit
+                                </div>
+                            </div>
                         </div>
-                        <div class="testimonial-info">
-                            <strong>Michael Reynolds</strong>
-                            <span>CFO, Meridian Holdings</span>
+
+                        <!-- Panel 2: Axion Legal Partners -->
+                        <div class="t-spotlight-panel" data-story="1">
+                            <div class="t-panel-backdrop-glow"></div>
+                            
+                            <div class="t-panel-top">
+                                <div class="t-company-tag">
+                                    <div class="t-company-icon"><i class="fas fa-scale-balanced"></i></div>
+                                    <div>
+                                        <h3 class="t-company-name">Axion Legal Partners</h3>
+                                        <span class="t-company-sector">Corporate Litigation & Compliance</span>
+                                    </div>
+                                </div>
+                                <div class="t-verified-audit-badge">
+                                    <div class="t-audit-stars">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    </div>
+                                    <span>5.0 • NAID AAA Chain Verified</span>
+                                </div>
+                            </div>
+
+                            <div class="t-quote-wrapper">
+                                <div class="t-giant-quote-mark">“</div>
+                                <blockquote class="t-main-quote">
+                                    When judges demand subpoenaed trial records on emergency notice, ArchiVault delivers physical evidentiary binders within 90 minutes. Their barcode-scanned chain of custody and tamper-evident seals are legally bulletproof.
+                                </blockquote>
+                            </div>
+
+                            <!-- Executive Profile Footer -->
+                            <div class="t-profile-footer">
+                                <div class="t-exec-avatar">
+                                    <img src="assets/images/avatar-sarah-patterson.jpg" alt="Sarah Patterson" loading="lazy">
+                                    <span class="t-exec-verified-check"><i class="fas fa-check"></i></span>
+                                </div>
+                                <div class="t-exec-details">
+                                    <strong class="t-exec-name">Sarah Patterson</strong>
+                                    <span class="t-exec-title">Director of Regulatory Compliance</span>
+                                    <span class="t-exec-org">Axion Legal Partners LLP</span>
+                                </div>
+                                <div class="t-case-study-tag">
+                                    <i class="fas fa-gavel"></i> Federal Litigation Support
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Panel 3: HealthFirst Medical Network -->
+                        <div class="t-spotlight-panel" data-story="2">
+                            <div class="t-panel-backdrop-glow"></div>
+                            
+                            <div class="t-panel-top">
+                                <div class="t-company-tag">
+                                    <div class="t-company-icon"><i class="fas fa-hospital"></i></div>
+                                    <div>
+                                        <h3 class="t-company-name">HealthFirst Medical</h3>
+                                        <span class="t-company-sector">Healthcare System & Hospital Network</span>
+                                    </div>
+                                </div>
+                                <div class="t-verified-audit-badge">
+                                    <div class="t-audit-stars">
+                                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                    </div>
+                                    <span>5.0 • HIPAA Certified Vaulting</span>
+                                </div>
+                            </div>
+
+                            <div class="t-quote-wrapper">
+                                <div class="t-giant-quote-mark">“</div>
+                                <blockquote class="t-main-quote">
+                                    We reclaimed 14,000 square feet of prime hospital clinical space by digitizing 20 years of medical charts. Today, our 1,200 physicians can pull up high-resolution patient histories directly in our EHR in under 3 seconds.
+                                </blockquote>
+                            </div>
+
+                            <!-- Executive Profile Footer -->
+                            <div class="t-profile-footer">
+                                <div class="t-exec-avatar">
+                                    <img src="assets/images/avatar-james-kowalski.jpg" alt="James Kowalski" loading="lazy">
+                                    <span class="t-exec-verified-check"><i class="fas fa-check"></i></span>
+                                </div>
+                                <div class="t-exec-details">
+                                    <strong class="t-exec-name">James Kowalski</strong>
+                                    <span class="t-exec-title">Chief Information Officer</span>
+                                    <span class="t-exec-org">HealthFirst Medical Network</span>
+                                </div>
+                                <div class="t-case-study-tag">
+                                    <i class="fas fa-hospital-user"></i> EHR Clinical Transformation
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card fade-up">
-                    <div class="testimonial-stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+
+                <!-- Right: Interactive Story Selector Rail -->
+                <div class="t-story-rail">
+                    <div class="t-rail-heading">
+                        <span class="t-rail-label"><i class="fas fa-compass"></i> Select Case Study</span>
+                        <div class="t-rail-counter"><span id="tCurrentIndex">1</span> / 3</div>
                     </div>
-                    <p class="testimonial-text">"The same-day retrieval service is incredible. When we need a file for an audit, ArchiVault delivers within hours — every single time."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">
-                            <img src="assets/images/avatar-sarah-patterson.jpg" alt="Sarah Patterson" loading="lazy">
+
+                    <div class="t-rail-items">
+                        <!-- Story Item 1 -->
+                        <div class="t-rail-item active" data-index="0" role="button" tabindex="0" aria-label="View Meridian Holdings story">
+                            <div class="t-rail-progress-bar">
+                                <div class="t-rail-progress-fill"></div>
+                            </div>
+                            <div class="t-rail-item-content">
+                                <div class="t-rail-item-icon"><i class="fas fa-building-columns"></i></div>
+                                <div class="t-rail-item-text">
+                                    <div class="t-rail-org">Meridian Holdings</div>
+                                    <div class="t-rail-summary">SEC-compliant archival migration in under 14 days</div>
+                                </div>
+                                <div class="t-rail-item-arrow"><i class="fas fa-chevron-right"></i></div>
+                            </div>
                         </div>
-                        <div class="testimonial-info">
-                            <strong>Sarah Patterson</strong>
-                            <span>Compliance Director, Axion Legal</span>
+
+                        <!-- Story Item 2 -->
+                        <div class="t-rail-item" data-index="1" role="button" tabindex="0" aria-label="View Axion Legal Partners story">
+                            <div class="t-rail-progress-bar">
+                                <div class="t-rail-progress-fill"></div>
+                            </div>
+                            <div class="t-rail-item-content">
+                                <div class="t-rail-item-icon"><i class="fas fa-scale-balanced"></i></div>
+                                <div class="t-rail-item-text">
+                                    <div class="t-rail-org">Axion Legal Partners</div>
+                                    <div class="t-rail-summary">90-minute urgent court retrieval with custody tracking</div>
+                                </div>
+                                <div class="t-rail-item-arrow"><i class="fas fa-chevron-right"></i></div>
+                            </div>
+                        </div>
+
+                        <!-- Story Item 3 -->
+                        <div class="t-rail-item" data-index="2" role="button" tabindex="0" aria-label="View HealthFirst Medical story">
+                            <div class="t-rail-progress-bar">
+                                <div class="t-rail-progress-fill"></div>
+                            </div>
+                            <div class="t-rail-item-content">
+                                <div class="t-rail-item-icon"><i class="fas fa-hospital"></i></div>
+                                <div class="t-rail-item-text">
+                                    <div class="t-rail-org">HealthFirst Medical</div>
+                                    <div class="t-rail-summary">14,000 sq ft clinical space saved via EHR cloud OCR</div>
+                                </div>
+                                <div class="t-rail-item-arrow"><i class="fas fa-chevron-right"></i></div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="testimonial-card fade-up">
-                    <div class="testimonial-stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"Their digital scanning service saved us thousands of square feet of office space. We can now search 20 years of records in seconds."</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar">
-                            <img src="assets/images/avatar-james-kowalski.jpg" alt="James Kowalski" loading="lazy">
-                        </div>
-                        <div class="testimonial-info">
-                            <strong>James Kowalski</strong>
-                            <span>IT Director, HealthFirst Medical</span>
+
+                    <!-- Story Rail Controls -->
+                    <div class="t-rail-nav">
+                        <div class="t-rail-nav-buttons">
+                            <button class="t-rail-btn" id="tPrevBtn" aria-label="Previous story"><i class="fas fa-arrow-left"></i></button>
+                            <button class="t-rail-btn" id="tNextBtn" aria-label="Next story"><i class="fas fa-arrow-right"></i></button>
                         </div>
                     </div>
                 </div>
@@ -738,6 +1013,6 @@
 
 <div id="footer-placeholder"></div>
 
-<script src="components.js?v=5.6"></script>
+<script src="components.js?v=8.0"></script>
 </body>
 </html>

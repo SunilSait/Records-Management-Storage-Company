@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=5.6">
+    <link rel="stylesheet" href="style.css?v=12.2">
     <script>
         (function(){try{if(localStorage.getItem('av-dark')==='1'){document.documentElement.classList.add('dark')}if(localStorage.getItem('av-rtl')==='1'){document.documentElement.setAttribute('dir','rtl')}}catch(e){}})();
     </script>
@@ -25,11 +25,6 @@
         <div class="container">
             <h1>About Us</h1>
             <p>Protecting critical business records and delivering secure archival solutions since 2005.</p>
-            <div class="page-breadcrumb">
-                <a href="index.html">Home</a>
-                <span>/</span>
-                <span>About</span>
-            </div>
         </div>
     </section>
 
@@ -91,7 +86,7 @@
             <div class="section-badge fade-up"><i class="fas fa-timeline"></i> Our Journey</div>
             <h2 class="section-title fade-up">A History of Innovation</h2>
             <p class="section-desc fade-up">Key milestones in our journey to becoming a leading records management provider.</p>
-            <div class="timeline fade-up" style="text-align:left;">
+            <div class="timeline fade-up">
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-year">2005</div>
@@ -138,7 +133,7 @@
             <div class="section-badge fade-up"><i class="fas fa-heart"></i> Core Values</div>
             <h2 class="section-title fade-up">What Drives Us Every Day</h2>
             <p class="section-desc fade-up">Our values are the foundation of everything we do — from how we handle your documents to how we serve your team.</p>
-            <div class="services-grid">
+            <div class="services-grid values-grid">
                 <div class="service-card fade-up">
                     <div class="service-icon"><i class="fas fa-lock"></i></div>
                     <h3>Security First</h3>
@@ -172,7 +167,7 @@
                             <span>Real-Time Fleet Telematics & GPS</span>
                         </div>
                         <div class="feature-mini-metric">
-                            <strong>Zero Custody Breaches</strong>
+                            <strong>Zero Breaches</strong>
                             <span>19-Year Unbroken Transit History</span>
                         </div>
                     </div>
@@ -184,7 +179,7 @@
                     </div>
                     <a href="services.html" class="btn btn-primary"><i class="fas fa-route"></i> Explore Courier Services</a>
                 </div>
-                <div class="image-showcase-card slide-right">
+                <div class="image-showcase-card courier-fleet-card slide-right">
                     <img src="assets/images/secure-courier-fleet.jpg" alt="ArchiVault secure document courier fleet in loading dock terminal">
                     <div class="image-badge-overlay bottom-right">
                         <span class="badge-dot green"></span> Fleet GPS Live • Encrypted Handheld Manifests
@@ -204,7 +199,7 @@
             </div>
 
             <!-- 4-Card Stage Grid -->
-            <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px;">
+            <div class="audit-stages-grid">
                 <div class="audit-stage-card fade-up">
                     <div class="audit-stage-media">
                         <img src="assets/images/stage-biometric-mantrap.jpg" alt="Biometric palm and retina airlock mantrap access control scanner" loading="lazy">
@@ -216,7 +211,7 @@
                             <div class="audit-stage-icon"><i class="fas fa-fingerprint"></i></div>
                         </div>
                         <h3>Biometric Access Control</h3>
-                        <p>Dual-custody credential verification requiring dual biometrics and cryptographic smart badges to cross airlock barriers.</p>
+                        <p>Dual-custody verification requiring biometrics and cryptographic smart badges to cross airlock barriers.</p>
                         <div class="audit-spec-list">
                             <div class="audit-spec-item"><i class="fas fa-circle-check"></i> Retina & capacitive palm scanners</div>
                             <div class="audit-spec-item"><i class="fas fa-circle-check"></i> Zero-latency badging audit trails</div>
@@ -236,7 +231,7 @@
                             <div class="audit-stage-icon"><i class="fas fa-microchip"></i></div>
                         </div>
                         <h3>RFID Asset Telemetry</h3>
-                        <p>Continuous UHF RFID beacon verification across warehouse shelving rows providing autonomous minute-by-minute inventory confirmation.</p>
+                        <p>Continuous UHF RFID beacon tracking across warehouse shelving providing automated real-time inventory verification.</p>
                         <div class="audit-spec-list">
                             <div class="audit-spec-item"><i class="fas fa-circle-check"></i> Shelf-level antenna array</div>
                             <div class="audit-spec-item"><i class="fas fa-circle-check"></i> Real-time misplaced carton alert</div>
@@ -256,7 +251,7 @@
                             <div class="audit-stage-icon"><i class="fas fa-file-contract"></i></div>
                         </div>
                         <h3>Forensic Audit Ledger</h3>
-                        <p>Immutable cryptographic event stamping for every retrieval, transport handoff, digitization scan, and scheduled shredding lifecycle.</p>
+                        <p>Immutable cryptographic event stamping for every retrieval, transport handoff, scan, and shredding lifecycle.</p>
                         <div class="audit-spec-list">
                             <div class="audit-spec-item"><i class="fas fa-circle-check"></i> SHA-256 timestamped signatures</div>
                             <div class="audit-spec-item"><i class="fas fa-circle-check"></i> Court-admissible custody logs</div>
@@ -276,7 +271,7 @@
                             <div class="audit-stage-icon"><i class="fas fa-certificate"></i></div>
                         </div>
                         <h3>Regulatory Accreditations</h3>
-                        <p>Pre-configured retention schedules conforming strictly to HIPAA, SOC 2 Type II, ISO 27001, and GLBA compliance mandates.</p>
+                        <p>Pre-configured retention schedules conforming strictly to HIPAA, SOC 2 Type II, ISO 27001, and GLBA mandates.</p>
                         <div class="audit-spec-list">
                             <div class="audit-spec-item"><i class="fas fa-circle-check"></i> Annual independent SOC 2 audits</div>
                             <div class="audit-spec-item"><i class="fas fa-circle-check"></i> Automated legal hold safeguards</div>

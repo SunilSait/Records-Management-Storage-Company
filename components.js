@@ -560,6 +560,24 @@ function initHeroSlider() {
             const isActive = i === currentIndex;
             slide.classList.toggle('active', isActive);
             slide.setAttribute('aria-hidden', !isActive);
+            if (isActive) {
+                slide.querySelectorAll('[data-count]').forEach(el => {
+                    const target = parseInt(el.dataset.count);
+                    const suffix = el.dataset.suffix || '';
+                    const prefix = el.dataset.prefix || '';
+                    if (isNaN(target)) return;
+                    let current = 0;
+                    const step = Math.max(1, Math.floor(target / 30));
+                    const countTimer = setInterval(() => {
+                        current += step;
+                        if (current >= target) {
+                            current = target;
+                            clearInterval(countTimer);
+                        }
+                        el.textContent = prefix + current + suffix;
+                    }, 25);
+                });
+            }
         });
 
         dots.forEach((dot, i) => {
@@ -663,6 +681,7 @@ document.addEventListener('DOMContentLoaded', () => {
     animateCounters();
     initHeroSlider();
     initMatrixFilter();
+    initTestimonialsHub();
 
     if (page === 'coming-soon.html') initCountdown();
 });
@@ -701,4 +720,98 @@ function initMatrixFilter() {
         });
     });
 }
+
+/* ---- Testimonials Spotlight Hub & Story Rail Controller ---- */
+function initTestimonialsHub() {
+    const panels = document.querySelectorAll('.t-spotlight-panel');
+    const railItems = document.querySelectorAll('.t-rail-item');
+    const counterEl = document.getElementById('tCurrentIndex');
+    const prevBtn = document.getElementById('tPrevBtn');
+    const nextBtn = document.getElementById('tNextBtn');
+    const stage = document.querySelector('.t-spotlight-stage');
+    const rail = document.querySelector('.t-story-rail');
+
+    if (!panels.length || !railItems.length) return;
+
+    let currentIndex = 0;
+    let isPaused = false;
+    const duration = 6000;
+    let startTime = Date.now();
+
+    function goToStory(index) {
+        currentIndex = (index + panels.length) % panels.length;
+
+        panels.forEach((p, i) => {
+            p.classList.toggle('active', i === currentIndex);
+        });
+
+        railItems.forEach((r, i) => {
+            const isActive = i === currentIndex;
+            r.classList.toggle('active', isActive);
+            const fill = r.querySelector('.t-rail-progress-fill');
+            if (fill) fill.style.width = '0%';
+        });
+
+        if (counterEl) {
+            counterEl.textContent = currentIndex + 1;
+        }
+
+        startTime = Date.now();
+    }
+
+    function runProgress() {
+        if (!isPaused) {
+            const elapsed = Date.now() - startTime;
+            const pct = Math.min(100, (elapsed / duration) * 100);
+
+            const activeRail = railItems[currentIndex];
+            if (activeRail) {
+                const fill = activeRail.querySelector('.t-rail-progress-fill');
+                if (fill) fill.style.width = pct + '%';
+            }
+
+            if (elapsed >= duration) {
+                goToStory(currentIndex + 1);
+            }
+        }
+        requestAnimationFrame(runProgress);
+    }
+
+    railItems.forEach((item, i) => {
+        item.addEventListener('click', () => {
+            goToStory(i);
+        });
+        item.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                goToStory(i);
+            }
+        });
+    });
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            goToStory(currentIndex - 1);
+        });
+    }
+
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            goToStory(currentIndex + 1);
+        });
+    }
+
+    const hoverContainers = [stage, rail].filter(Boolean);
+    hoverContainers.forEach(el => {
+        el.addEventListener('mouseenter', () => { isPaused = true; });
+        el.addEventListener('mouseleave', () => {
+            isPaused = false;
+            startTime = Date.now();
+        });
+    });
+
+    goToStory(0);
+    requestAnimationFrame(runProgress);
+}
+
 

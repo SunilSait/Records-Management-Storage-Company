@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=5.6">
+    <link rel="stylesheet" href="style.css?v=12.2">
     <script>
         (function(){try{if(localStorage.getItem('av-dark')==='1'){document.documentElement.classList.add('dark')}if(localStorage.getItem('av-rtl')==='1'){document.documentElement.setAttribute('dir','rtl')}}catch(e){}})();
     </script>
@@ -25,11 +25,6 @@
         <div class="container">
             <h1>Our Services</h1>
             <p>End-to-end records management solutions designed for security, compliance, and efficiency.</p>
-            <div class="page-breadcrumb">
-                <a href="index.html">Home</a>
-                <span>/</span>
-                <span>Services</span>
-            </div>
         </div>
     </section>
 
@@ -64,7 +59,7 @@
         <div class="container">
             <div class="vault-cockpit-bento">
                 <div class="cockpit-media-frame fade-up">
-                    <img src="assets/images/hero-storage-facility.jpg" alt="Climate-controlled records storage vault interior with computerized shelving">
+                    <img src="assets/images/climate-records-aisles.jpg" alt="Climate-controlled records storage vault interior with heavy-duty security-caged shelving and climate ducts">
                     <div class="cockpit-badge-top">
                         <span class="badge-dot green"></span> Sector 04 • High-Density Vault Active
                     </div>
@@ -74,7 +69,7 @@
                             <span>Constant Preservation</span>
                         </div>
                         <div class="cockpit-gauge-item">
-                            <strong>FM-200 Clean Agent</strong>
+                            <strong>FM-200 Agent</strong>
                             <span>Waterless Suppression</span>
                         </div>
                         <div class="cockpit-gauge-item">
@@ -171,7 +166,7 @@
 
                 <div class="dispatch-terminal-card fade-up">
                     <div class="dispatch-terminal-img-wrap">
-                        <img src="assets/images/retrieval-service.jpg" alt="Document retrieval specialist scanning barcodes and locating archive boxes">
+                        <img src="assets/images/barcode-carton-retrieval.jpg" alt="Document retrieval specialist on order-picker lift scanning barcodes and pulling archive cartons from high-bay racks">
                         <div class="dispatch-overlay-tag">
                             <span class="badge-dot green"></span> Live Fulfillment Dispatch
                         </div>
@@ -222,7 +217,7 @@
                         </div>
                         <div class="scanner-stat-unit">
                             <strong>PDF/A & TIFF</strong>
-                            <span>Searchable Multi-Format</span>
+                            <span>Searchable Multi</span>
                         </div>
                     </div>
                 </div>
@@ -230,7 +225,7 @@
                 <!-- 3 Modern Feature Cards Column -->
                 <div class="digitization-stages-column">
                     <div class="digitization-stage-card fade-up">
-                        <div class="stage-card-icon"><i class="fas fa-scanner-image"></i></div>
+                        <div class="stage-card-icon"><i class="fas fa-print"></i></div>
                         <div class="stage-card-body">
                             <h3>High-Velocity Production Scanning</h3>
                             <p>Ultrasonic double-feed detection with automated deskewing, background suppression, and color dropout for high-speed carton digitization.</p>
@@ -273,7 +268,7 @@
     <section class="services-ai-intelligence-section section-alt">
         <div class="container">
             <div class="text-center" style="max-width: 780px; margin: 0 auto 48px;">
-                <div class="section-badge fade-up"><i class="fas fa-brain-circuit"></i> Next-Gen Processing</div>
+                <div class="section-badge fade-up"><i class="fas fa-brain"></i> Next-Gen Processing</div>
                 <h2 class="section-title fade-up">Cognitive AI Records Intelligence & Auto-Indexing</h2>
                 <p class="section-desc fade-up">Bridge physical documents and automated digital workflows. Our multi-model neural OCR pipelines extract structured data, classify document types, and trigger automated compliance lifecycles with 99.8% precision.</p>
             </div>
@@ -281,46 +276,64 @@
             <div class="ai-modules-grid">
                 <!-- Module 1 -->
                 <div class="ai-module-card fade-up">
-                    <div class="ai-module-head">
-                        <span class="ai-module-badge vision">Vision & OCR</span>
-                        <div class="ai-module-icon"><i class="fas fa-eye"></i></div>
+                    <div class="ai-module-media">
+                        <img src="assets/images/ai-optical-parsing-vision.jpg" alt="Computer vision OCR neural pipeline parsing printed and handwritten records" loading="lazy">
+                        <div class="ai-module-media-overlay"></div>
                     </div>
-                    <h3>Multi-Engine Optical Parsing</h3>
-                    <p>Detect printed text, cursive handwriting, barcode symbologies, and tabular figures across damaged, creased, or aged paper records.</p>
-                    <div class="ai-module-checks">
-                        <div class="ai-module-check"><i class="fas fa-check"></i> Layout-aware boundary detection</div>
-                        <div class="ai-module-check"><i class="fas fa-check"></i> Handwriting (ICR) transcription</div>
-                        <div class="ai-module-check"><i class="fas fa-check"></i> Auto deskew, despill & clean up</div>
+                    <div class="ai-module-body">
+                        <div class="ai-module-head">
+                            <span class="ai-module-badge vision">Vision & OCR</span>
+                            <div class="ai-module-icon"><i class="fas fa-eye"></i></div>
+                        </div>
+                        <h3>Multi-Engine Optical Parsing</h3>
+                        <p>Detect printed text, cursive handwriting, barcode symbologies, and tabular figures across damaged, creased, or aged paper.</p>
+                        <div class="ai-module-checks">
+                            <div class="ai-module-check"><i class="fas fa-check"></i> Layout-aware boundary detection</div>
+                            <div class="ai-module-check"><i class="fas fa-check"></i> Handwriting (ICR) transcription</div>
+                            <div class="ai-module-check"><i class="fas fa-check"></i> Auto deskew, despill & clean up</div>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Module 2 -->
                 <div class="ai-module-card fade-up">
-                    <div class="ai-module-head">
-                        <span class="ai-module-badge nlp">Semantic NLP</span>
-                        <div class="ai-module-icon"><i class="fas fa-diagram-project"></i></div>
+                    <div class="ai-module-media">
+                        <img src="assets/images/ai-nlp-taxonomy-classification.jpg" alt="Semantic NLP automated taxonomy categorization and document hierarchy clustering" loading="lazy">
+                        <div class="ai-module-media-overlay"></div>
                     </div>
-                    <h3>Automated Taxonomy Classification</h3>
-                    <p>Automatically categorize contracts, patient files, blueprints, tax manifests, and invoices into designated folder taxonomies without human sorting.</p>
-                    <div class="ai-module-checks">
-                        <div class="ai-module-check"><i class="fas fa-check"></i> Named entity recognition (NER)</div>
-                        <div class="ai-module-check"><i class="fas fa-check"></i> PII & PHI automated redaction</div>
-                        <div class="ai-module-check"><i class="fas fa-check"></i> Smart metadata cross-tagging</div>
+                    <div class="ai-module-body">
+                        <div class="ai-module-head">
+                            <span class="ai-module-badge nlp">Semantic NLP</span>
+                            <div class="ai-module-icon"><i class="fas fa-diagram-project"></i></div>
+                        </div>
+                        <h3>Automated Taxonomy Classification</h3>
+                        <p>Automatically categorize contracts, patient files, blueprints, tax manifests, and invoices into designated folder taxonomies.</p>
+                        <div class="ai-module-checks">
+                            <div class="ai-module-check"><i class="fas fa-check"></i> Named entity recognition (NER)</div>
+                            <div class="ai-module-check"><i class="fas fa-check"></i> PII & PHI automated redaction</div>
+                            <div class="ai-module-check"><i class="fas fa-check"></i> Smart metadata cross-tagging</div>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Module 3 -->
                 <div class="ai-module-card fade-up">
-                    <div class="ai-module-head">
-                        <span class="ai-module-badge retention">Lifecycle Automation</span>
-                        <div class="ai-module-icon"><i class="fas fa-calendar-check"></i></div>
+                    <div class="ai-module-media">
+                        <img src="assets/images/ai-retention-lifecycle-automation.jpg" alt="Autonomous document retention schedule countdowns and statutory destruction timers" loading="lazy">
+                        <div class="ai-module-media-overlay"></div>
                     </div>
-                    <h3>Autonomous Retention Timers</h3>
-                    <p>Assign immutable regulatory destruction dates upon scanning. Get notified when document lifecycles mature for authorized shredding or legal hold.</p>
-                    <div class="ai-module-checks">
-                        <div class="ai-module-check"><i class="fas fa-check"></i> Statutory retention timers</div>
-                        <div class="ai-module-check"><i class="fas fa-check"></i> Dual-signoff shred authorization</div>
-                        <div class="ai-module-check"><i class="fas fa-check"></i> Immutable audit trail archive</div>
+                    <div class="ai-module-body">
+                        <div class="ai-module-head">
+                            <span class="ai-module-badge retention">Lifecycle Automation</span>
+                            <div class="ai-module-icon"><i class="fas fa-calendar-check"></i></div>
+                        </div>
+                        <h3>Autonomous Retention Timers</h3>
+                        <p>Assign immutable regulatory destruction dates upon scanning. Get notified when document lifecycles mature for shredding.</p>
+                        <div class="ai-module-checks">
+                            <div class="ai-module-check"><i class="fas fa-check"></i> Statutory retention timers</div>
+                            <div class="ai-module-check"><i class="fas fa-check"></i> Dual-signoff shred authorization</div>
+                            <div class="ai-module-check"><i class="fas fa-check"></i> Immutable audit trail archive</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -342,12 +355,12 @@
                 <div class="process-step fade-up">
                     <div class="process-num">2</div>
                     <h4>Custom Plan</h4>
-                    <p>Tailored storage and management plan with transparent pricing and SLA commitments.</p>
+                    <p>Tailored storage and management plan with transparent pricing and SLA.</p>
                 </div>
                 <div class="process-step fade-up">
                     <div class="process-num">3</div>
                     <h4>Secure Pickup</h4>
-                    <p>Our team collects your records with chain-of-custody documentation and tamper seals.</p>
+                    <p>Our team collects your records with chain-of-custody documentation.</p>
                 </div>
                 <div class="process-step fade-up">
                     <div class="process-num">4</div>
