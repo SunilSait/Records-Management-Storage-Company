@@ -3,9 +3,25 @@
    Shared navbar, footer, dark/RTL toggles, utilities
    =================================================== */
 
-// Immediate Theme & Direction Initialization (prevents theme flash)
+// Immediate Theme & Direction Initialization (prevents theme flash) + Scroll Control
 (function() {
     try {
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        if (!window.location.hash) {
+            window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+            if (document.documentElement) document.documentElement.scrollTop = 0;
+            if (document.body) document.body.scrollTop = 0;
+        }
+        window.addEventListener('pageshow', function() {
+            if (!window.location.hash) {
+                window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+                if (document.documentElement) document.documentElement.scrollTop = 0;
+                if (document.body) document.body.scrollTop = 0;
+            }
+        });
+
         const savedDark = localStorage.getItem('av-dark');
         if (savedDark === '1') {
             document.documentElement.classList.add('dark');
@@ -186,7 +202,16 @@ function initNavbar() {
 
     if (menu) {
         menu.querySelectorAll('a').forEach(a => {
-            a.addEventListener('click', () => {
+            a.addEventListener('click', (e) => {
+                const href = a.getAttribute('href');
+                const currentPage = getCurrentPage();
+                if (href) {
+                    const targetPage = href.split('#')[0].split('?')[0];
+                    if ((targetPage === currentPage || (targetPage === 'index.html' && (currentPage === '' || currentPage === 'index.html'))) && !href.includes('#')) {
+                        e.preventDefault();
+                        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+                    }
+                }
                 menu.classList.remove('open');
                 if (backdrop) backdrop.classList.remove('open');
                 const iconEl = document.querySelector('.mobile-menu-icon');
@@ -195,6 +220,21 @@ function initNavbar() {
             });
         });
     }
+
+    // Desktop nav link clicks for same page
+    document.querySelectorAll('.nav-links a').forEach(a => {
+        a.addEventListener('click', (e) => {
+            const href = a.getAttribute('href');
+            const currentPage = getCurrentPage();
+            if (href) {
+                const targetPage = href.split('#')[0].split('?')[0];
+                if ((targetPage === currentPage || (targetPage === 'index.html' && (currentPage === '' || currentPage === 'index.html'))) && !href.includes('#')) {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+                }
+            }
+        });
+    });
 
     document.addEventListener('click', function(e) {
         if (!menu || !menu.classList.contains('open')) return;
